@@ -48,10 +48,9 @@ export function Preloader() {
   );
 }
 
-import { useEffect as useE, useState as useS } from "react";
 export function useReady() {
-  const [ready, setReady] = useS(false);
-  useE(() => {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
     if ((window as unknown as { __rlReady?: boolean }).__rlReady) { setReady(true); return; }
     const on = () => setReady(true);
     window.addEventListener("rl:ready", on);

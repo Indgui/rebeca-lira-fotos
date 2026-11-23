@@ -25,7 +25,7 @@ export const site = {
   role: "Psicóloga Clínica",
   crp: "CRP 06/202525",
   tagline: "Te ajudo a compreender emoções, comportamento e neurodesenvolvimento.",
-  url: "https://rebecalira.vercel.app", // troque pelo domínio final
+  url: "https://rebeca-lira.vercel.app",
   instagram: "https://www.instagram.com/psi_beca/",
   instagramHandle: "@psi_beca",
   whatsapp: "(11) 97609-5404",

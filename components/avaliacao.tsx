@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { avaliacao, photos, site } from "@/lib/site";
-import { FadeUp, LineReveal } from "./fx/reveal";
+import { FadeUp } from "./fx/reveal";
 import { Magnetic } from "./fx/magnetic";
 import { WhatsApp } from "./icons";
 
@@ -142,4 +142,3 @@ export function Avaliacao() {
   );
 }
 
-export { LineReveal };
