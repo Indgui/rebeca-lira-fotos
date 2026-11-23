@@ -2,6 +2,9 @@
 
 /** Fotos ilustrativas (Unsplash, licença livre para uso comercial). A foto da Rebeca aparece só no topo. */
 const un = (id: string, w = 1400) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+/** Foto da Rebeca (fundo removido), hospedada no GitHub e servida pelo jsDelivr. */
+export const rebecaFoto = "https://cdn.jsdelivr.net/gh/Indgui/rebeca-lira-fotos@a57b9d731125da11582b0b225eb1741370526517/public/rebeca-recorte.webp";
+
 export const photos = {
   sobre: { src: un("1758273240373-370993d0275d"), alt: "Psicóloga escutando com atenção uma jovem durante a sessão" },
   infantil: { src: un("1758273240331-745ccab011a2"), alt: "Terapeuta conversando com uma menina no sofá" },

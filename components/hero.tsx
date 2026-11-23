@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
-import { site } from "@/lib/site";
+import { rebecaFoto, site } from "@/lib/site";
 import { useReady } from "./fx/preloader";
 import { Magnetic } from "./fx/magnetic";
 import { WhatsApp, Arrow } from "./icons";
@@ -59,9 +59,9 @@ export function Hero() {
                   initial={{ width: 0 }}
                   animate={ready ? { width: "1.7em" } : {}}
                   transition={{ duration: 1.1, ease, delay: 0.7 }}
-                  className="relative inline-block h-[0.8em] overflow-hidden rounded-full align-middle"
+                  className="relative inline-block h-[0.8em] overflow-hidden rounded-full bg-sage align-middle"
                 >
-                  <Image src="/rebeca-tapete.webp" alt="" fill sizes="200px" className="object-cover object-[50%_35%]" priority />
+                  <Image src={rebecaFoto} alt="" fill sizes="200px" unoptimized className="scale-[1.6] object-cover object-[50%_8%]" priority />
                 </motion.span>
                 é o
               </span>
@@ -82,11 +82,11 @@ export function Hero() {
           </motion.div>
           <motion.div style={{ y: imgY }} className="absolute inset-0">
             <Image
-              src="/rebeca-recorte.webp"
+              src={rebecaFoto}
               alt="Rebeca Lira, psicóloga"
               fill
               priority
-              sizes="(min-width:1024px) 33vw, 380px"
+              sizes="440px" unoptimized
               className="object-contain object-bottom"
             />
           </motion.div>

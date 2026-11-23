@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { site } from "@/lib/site";
+import { rebecaFoto, site } from "@/lib/site";
 import "@fontsource-variable/inter-tight";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "pt_BR",
     type: "website",
-    images: [{ url: "/rebeca-og.jpg", width: 600, height: 750, alt: site.name }],
+    images: [{ url: rebecaFoto, alt: site.name }],
   },
 };
 
@@ -30,7 +30,7 @@ const jsonLd = {
   description: site.tagline,
   url: site.url,
   telephone: "+55-11-97609-5404",
-  image: `${site.url}/rebeca-og.jpg`,
+  image: rebecaFoto,
   sameAs: [site.instagram],
   areaServed: "BR",
 };
