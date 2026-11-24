@@ -135,7 +135,7 @@ export const comoComecar = [
 
 export const faqs = [
   { q: "Quem pode ser atendido na Clínica Equilibre?", a: "Atendemos crianças, adolescentes, adultos, idosos e casais, incluindo pessoas com TEA, TDAH e outras condições do neurodesenvolvimento." },
-  { q: "A terapia online é eficaz?", a: "Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e mantém o mesmo cuidado, sigilo e qualidade do presencial. A escolha depende do que for mais confortável para você." },
+  { q: "A terapia online é eficaz?", a: "O atendimento online é regulamentado pelo Conselho Federal de Psicologia e segue os mesmos princípios éticos e de sigilo do presencial. Para muitas pessoas, é uma alternativa eficaz, mas a modalidade mais adequada depende das necessidades, da idade e das condições de cada paciente, o que é avaliado em conjunto antes de iniciar o acompanhamento." },
   { q: "Como funciona o atendimento infantil?", a: "Com crianças, o atendimento usa recursos lúdicos, como brincadeiras e desenhos, para facilitar a expressão. Os pais ou responsáveis participam de encontros de orientação ao longo do processo." },
   { q: "Tenho suspeita de TDAH ou autismo. Posso procurar atendimento?", a: "Pode, sim. Muitas pessoas chegam com essa dúvida. Investigamos com cuidado o seu funcionamento e, quando necessário, há orientação e encaminhamento para outros profissionais." },
   { q: "Quantas sessões são necessárias para a avaliação neuropsicológica?", a: "Em média, de 12 a 15 sessões, com duração aproximada de 40 a 50 minutos cada, incluindo entrevista, aplicação dos instrumentos, análise dos resultados e devolutiva com laudo." },

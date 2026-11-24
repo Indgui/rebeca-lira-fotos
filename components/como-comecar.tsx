@@ -41,7 +41,7 @@ export function ComoComecar() {
               data-cursor="WhatsApp"
               className="inline-flex items-center gap-3 rounded-full bg-forest px-7 py-4 font-medium text-cream transition-colors hover:bg-sage"
             >
-              <WhatsApp className="size-5" /> Fale conosco pelo WhatsApp
+              <WhatsApp className="size-5" /> Agendar pelo WhatsApp
             </a>
           </Magnetic>
         </div>

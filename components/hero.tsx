@@ -116,7 +116,7 @@ export function Hero() {
               data-cursor="Agendar"
               className="inline-flex items-center gap-3 rounded-full bg-forest px-7 py-4 font-medium text-cream transition-colors hover:bg-sage"
             >
-              <WhatsApp className="size-5" /> Agende seu atendimento
+              <WhatsApp className="size-5" /> Agendar pelo WhatsApp
             </a>
           </Magnetic>
           <a href="#sobre" className="group inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-4 font-medium">

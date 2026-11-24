@@ -1,9 +1,9 @@
-import { photos } from "@/lib/site";
+import { photos, site } from "@/lib/site";
 import { FadeUp, ImageReveal, LineReveal } from "./fx/reveal";
 
 const modes = [
-  { t: "Online", d: "Acompanhamento por videochamada, com praticidade e flexibilidade." },
-  { t: "Presencial", d: "Ambiente acolhedor, preparado para oferecer privacidade e tranquilidade, no bairro São Miguel Paulista, em São Paulo." },
+  { t: "Online", d: "Acompanhamento por videochamada, com praticidade e flexibilidade. A indicação dessa modalidade é avaliada caso a caso, de acordo com as necessidades e as condições de cada paciente." },
+  { t: "Presencial", d: "Ambiente acolhedor, preparado para oferecer privacidade e tranquilidade, na região de São Miguel Paulista, zona leste de São Paulo." },
 ];
 
 export function Atendimento() {
@@ -37,6 +37,14 @@ export function Atendimento() {
                 </div>
               </FadeUp>
             ))}
+          </div>
+          <div className="rounded-[2rem] bg-cream p-7 md:p-9">
+            <h3 className="text-2xl font-medium tracking-tight">Como funciona o agendamento</h3>
+            <ol className="mt-5 grid gap-4 text-muted md:grid-cols-3">
+              <li><b className="block font-medium text-ink">1. Contato</b>Envie uma mensagem pelo WhatsApp {site.whatsapp} contando o que você procura.</li>
+              <li><b className="block font-medium text-ink">2. Modalidade e horário</b>Juntos, definimos se o atendimento será online ou presencial e o melhor dia e horário.</li>
+              <li><b className="block font-medium text-ink">3. Confirmação</b>Após a confirmação, enviamos o endereço completo do consultório ou o link da videochamada.</li>
+            </ol>
           </div>
           <div className="max-w-xl">
             <h3 className="text-2xl font-medium tracking-tight md:text-3xl">Atendimento pensado para você</h3>

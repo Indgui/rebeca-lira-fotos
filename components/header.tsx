@@ -51,7 +51,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="hidden items-center gap-2 rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-clay sm:inline-flex"
               >
-                <WhatsApp className="size-4" /> Agendar atendimento
+                <WhatsApp className="size-4" /> Agendar pelo WhatsApp
               </a>
             </Magnetic>
             <button

@@ -32,7 +32,7 @@ export function Contact() {
                 >
                   <span className="flex flex-col items-center gap-2">
                     <WhatsApp className="size-7" />
-                    Agende pelo<br />WhatsApp
+                    Agendar pelo{" "}<br />WhatsApp
                   </span>
                 </a>
               </Magnetic>
@@ -63,7 +63,11 @@ export function Contact() {
                 <p className="text-cream/50">Modalidades</p>
                 <p className="mt-2 text-lg">Online e presencial</p>
                 <p className="mt-1 text-cream/70">Presencial em {site.bairro}, {site.cidade}</p>
-                <p className="mt-4 text-xs text-cream/50">Em caso de emergência emocional, ligue para o CVV (188) ou procure o serviço de saúde mais próximo.</p>
+                <div className="mt-4 space-y-1.5 text-xs text-cream/60">
+                  <p>Este site não é um serviço de urgência.</p>
+                  <p><b className="font-medium text-cream/80">Apoio emocional:</b> CVV, ligue 188 (gratuito, 24 horas) ou acesse cvv.org.br.</p>
+                  <p><b className="font-medium text-cream/80">Emergência médica:</b> ligue para o SAMU (192) ou procure a UPA ou o pronto-socorro mais próximo.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -73,6 +77,7 @@ export function Contact() {
           <div className="mx-auto mt-4 flex max-w-[1400px] flex-wrap justify-between gap-2 text-xs text-cream/50">
             <span>© {new Date().getFullYear()} {site.legalName} · Todos os direitos reservados</span>
             <span>{site.rt}</span>
+            <a href="/privacidade" className="underline-offset-4 hover:underline">Política de Privacidade</a>
             <span>Fotos ilustrativas: Unsplash e Pexels</span>
             <a href="#inicio" className="md:mr-16">Voltar ao topo ↑</a>
           </div>
