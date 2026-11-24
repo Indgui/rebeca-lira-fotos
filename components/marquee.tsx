@@ -19,7 +19,7 @@ function Row({ base, children }: { base: number; children: React.ReactNode }) {
     x.set(x.get() + move);
   });
   return (
-    <div className="flex overflow-hidden whitespace-nowrap">
+    <div className="flex overflow-hidden whitespace-nowrap py-[0.12em]">
       <motion.div style={{ x: pos, skewX: skew }} className="flex shrink-0">
         {children}
         {children}
@@ -33,14 +33,14 @@ export function Marquee() {
     <div className="flex shrink-0 items-center">
       {marquee.map((m, i) => (
         <span key={i} className="flex items-center">
-          <span className={`px-6 text-[clamp(2.5rem,6vw,5.5rem)] leading-none tracking-tight ${i % 2 ? "serif italic text-clay" : "font-medium"}`}>{m}</span>
+          <span className={`px-6 text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.25] tracking-tight ${i % 2 ? "serif italic text-clay" : "font-medium"}`}>{m}</span>
           <span className="text-3xl text-sage">✳</span>
         </span>
       ))}
     </div>
   );
   return (
-    <section aria-label="Áreas de atuação" className="border-y border-ink/10 py-8">
+    <section aria-label="Áreas de atuação" className="border-y border-ink/10 py-6">
       <Row base={-3}>{items}</Row>
     </section>
   );
