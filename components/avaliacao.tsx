@@ -27,7 +27,7 @@ function Formato() {
     <div className="flex h-full flex-col justify-between gap-8">
       <div className="grid grid-cols-2 gap-4">
         <div className="rounded-3xl bg-cream/10 p-6">
-          <div className="text-6xl font-medium leading-none tracking-tighter md:text-8xl">10</div>
+          <div className="text-4xl font-medium leading-none tracking-tighter sm:text-5xl md:text-6xl">12–15</div>
           <p className="mt-2 text-cream/70">sessões</p>
         </div>
         <div className="rounded-3xl bg-butter p-6 text-ink">

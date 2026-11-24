@@ -26,7 +26,6 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 
 .brand-gradient { background: linear-gradient(180deg,#0b5f92 0%,#0f86ae 55%,#16a0bc 100%); }
 .text-brand { background: linear-gradient(180deg,#0b5f92,#16a0bc); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.rainbow { background: linear-gradient(90deg,#e5484d,#f2992e,#f2c430,#2ea55b,#3b82e0,#7c4dc4); }
 
 .serif { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; }
 

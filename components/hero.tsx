@@ -6,7 +6,6 @@ import { site } from "@/lib/site";
 import { useReady } from "./fx/preloader";
 import { Magnetic } from "./fx/magnetic";
 import { WhatsApp, Arrow } from "./icons";
-import { Infinity } from "./infinity";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -60,11 +59,15 @@ export function Hero() {
                 é cuidar
                 <motion.span
                   initial={{ width: 0, opacity: 0 }}
-                  animate={ready ? { width: "1.5em", opacity: 1 } : {}}
+                  animate={ready ? { width: "1.25em", opacity: 1 } : {}}
                   transition={{ duration: 1.1, ease, delay: 0.7 }}
                   className="inline-flex items-center overflow-hidden"
                 >
-                  <Infinity className="h-[0.62em] w-[1.5em] shrink-0" />
+                  <span className="brand-gradient grid h-[0.72em] w-[1.25em] shrink-0 place-items-center rounded-full">
+                    <svg viewBox="0 0 24 24" className="h-[0.42em] w-[0.42em]" fill="none" stroke="white" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                    </svg>
+                  </span>
                 </motion.span>
               </span>
             </Line>

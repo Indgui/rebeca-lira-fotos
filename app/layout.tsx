@@ -7,9 +7,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.fullName} | Psicologia, Avaliação Neuropsicológica, Psicopedagogia e ABA`,
-  description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e ABA. Atendimento online e presencial.`,
-  keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "ABA", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online"],
+  title: `${site.fullName} | Psicologia, Avaliação Neuropsicológica, Psicopedagogia, TEA e TDAH`,
+  description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e acompanhamento em TEA e TDAH. Atendimento online e presencial.`,
+  keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online"],
   openGraph: {
     title: site.fullName,
     description: site.tagline,
@@ -32,7 +32,7 @@ const jsonLd = {
   url: site.url,
   logo: `${site.url}/logo-equilibre.svg`,
   image: `${site.url}/og-equilibre.jpg`,
-  telephone: "+55-11-97609-5404",
+  telephone: "+55-11-91531-6550",
   sameAs: [site.instagram],
   areaServed: "BR",
 };
