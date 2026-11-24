@@ -19,7 +19,9 @@ for cat, qs in Q.items():
         try:
             data = json.load(urllib.request.urlopen(urllib.request.Request(url, headers=H), timeout=30))
         except Exception as e:
-            print("ERR", q, e); continue
+            body = getattr(e, "read", lambda: b"")()[:300]
+            open("out/log.txt","a").write(f"ERR {q} {e} {body}\n"); continue
+        open("out/log.txt","a").write(f"OK {q} {len(data.get('results',[]))}\n")
         for r in data.get("results", []):
             raw = r["urls"]["raw"]
             if r.get("premium") or "plus.unsplash" in raw or r["id"] in seen: continue
