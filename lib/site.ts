@@ -4,15 +4,19 @@
 const un = (id: string, w = 1400) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 const px = (id: string, w = 1400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 export const photos = {
-  sobre: { src: px("5699473"), alt: "Psicóloga escutando com atenção durante uma sessão, à mesa do consultório" },
+  // Fotos reais da clínica
+  sobre: { src: "/clinica-sala.webp", alt: "Sala de atendimento da Clínica Equilibre, com poltrona, sofá e plantas", pos: "50% 50%" },
+  placa: { src: "/clinica-placa.webp", alt: "Placa com o logotipo da Clínica Equilibre Mente & Corpo na entrada", pos: "50% 50%" },
+  consultorio: { src: "/clinica-consultorio.webp", alt: "Consultório da Clínica Equilibre com sofá, manta amarela e janela com persiana", pos: "22% 50%" },
+  brinquedoteca: { src: "/clinica-brinquedoteca.webp", alt: "Espaço infantil da clínica com piscina de bolinhas, almofadas e jogos", pos: "80% 50%" },
   infantil: { src: un("1771765767087-ce71e4a7916a"), alt: "Profissional conversando com um menino em uma sala colorida" },
   psicopedagogia: { src: px("36812773"), alt: "Adolescente estudando com o apoio de uma profissional" },
-  adultos: { src: px("4101132"), alt: "Homem conversando com a psicóloga em um consultório claro e acolhedor" },
-  tea: { src: un("1758598737955-7c8a9556706a"), alt: "Mulher e criança montando blocos coloridos juntas" },
+  adultos: { src: "/clinica-consultorio.webp", alt: "Consultório da Clínica Equilibre com sofá, manta amarela e janela com persiana", pos: "30% 50%" },
+  tea: { src: "/clinica-brinquedoteca.webp", alt: "Espaço infantil da clínica com piscina de bolinhas, almofadas e jogos", pos: "85% 50%" },
   avaliacao: { src: un("1771765767087-ce71e4a7916a"), alt: "Profissional conversando com um menino em uma sala colorida" },
   avaliacaoPainel: { src: un("1758598737547-666bce663667"), alt: "Menino montando blocos com a profissional à mesa" },
   online: { src: un("1758521541816-49d0090fccc4"), alt: "Jovem acenando em uma videochamada pelo notebook" },
-  presencial: { src: px("7176229"), alt: "Casal conversando com a psicóloga no sofá do consultório" },
+  presencial: { src: "/clinica-consultorio.webp", alt: "Consultório da Clínica Equilibre com sofá, manta amarela e janela com persiana", pos: "18% 50%" },
 };
 const wa = (msg: string) => "https://wa.me/5511915316550?text=" + encodeURIComponent(msg);
 

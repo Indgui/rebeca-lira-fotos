@@ -22,7 +22,7 @@ export function Atendimento() {
               <span className="absolute bottom-4 left-4 rounded-full bg-cream/85 px-3 py-1.5 text-xs font-medium backdrop-blur-md md:text-sm">Online</span>
             </div>
             <div className="relative mt-12">
-              <ImageReveal src={photos.presencial.src} alt={photos.presencial.alt} className="aspect-[3/4] w-full rounded-[2rem]" />
+              <ImageReveal src={photos.presencial.src} alt={photos.presencial.alt} className="aspect-[3/4] w-full rounded-[2rem]" imgClassName="object-[18%_50%]" />
               <span className="absolute bottom-4 left-4 rounded-full bg-cream/85 px-3 py-1.5 text-xs font-medium backdrop-blur-md md:text-sm">Presencial</span>
             </div>
           </div>

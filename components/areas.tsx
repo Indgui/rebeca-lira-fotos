@@ -39,7 +39,7 @@ function Card({ a, i, total, progress }: { a: (typeof areas)[number]; i: number;
           </div>
         </div>
         <div className="relative h-48 md:h-auto">
-          <Image src={a.img.src} alt={a.img.alt} fill sizes="50vw" className="object-cover" />
+          <Image src={a.img.src} alt={a.img.alt} fill sizes="50vw" className="object-cover" style={"pos" in a.img ? { objectPosition: a.img.pos as string } : undefined} />
         </div>
       </motion.article>
     </div>

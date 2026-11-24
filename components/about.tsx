@@ -8,7 +8,13 @@ export function About() {
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
             <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Conheça a Equilibre )</span>
-            <ImageReveal src={photos.sobre.src} alt={photos.sobre.alt} className="aspect-[4/5] w-full max-w-sm rounded-[2rem]" />
+            <div className="relative max-w-sm">
+              <ImageReveal src={photos.sobre.src} alt={photos.sobre.alt} className="aspect-[4/5] w-full rounded-[2rem]" />
+              <div className="absolute -bottom-8 -right-4 w-36 overflow-hidden rounded-2xl border-4 border-cream shadow-[0_18px_40px_rgba(0,0,0,.15)] md:-right-10 md:w-44">
+                <img src={photos.placa.src} alt={photos.placa.alt} loading="lazy" className="aspect-square w-full object-cover" />
+              </div>
+            </div>
+            <p className="mt-12 text-sm text-muted">Nosso espaço em São Miguel Paulista, São Paulo.</p>
           </div>
         </div>
         <div className="lg:col-span-8">
