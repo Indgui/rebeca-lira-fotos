@@ -3,7 +3,7 @@ import { FadeUp, ImageReveal, LineReveal } from "./fx/reveal";
 
 const modes = [
   { t: "Online", d: "Acompanhamento por videochamada, com praticidade e flexibilidade." },
-  { t: "Presencial", d: "Ambiente acolhedor, preparado para oferecer privacidade e tranquilidade." },
+  { t: "Presencial", d: "Ambiente acolhedor, preparado para oferecer privacidade e tranquilidade, no bairro São Miguel Paulista, em São Paulo." },
 ];
 
 export function Atendimento() {

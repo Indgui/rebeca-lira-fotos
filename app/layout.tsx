@@ -8,8 +8,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: `${site.fullName} | Psicologia, Avaliação Neuropsicológica, Psicopedagogia, TEA e TDAH`,
-  description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e acompanhamento em TEA e TDAH. Atendimento online e presencial.`,
-  keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online"],
+  description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e acompanhamento em TEA e TDAH. Atendimento online e presencial em São Miguel Paulista, São Paulo – SP.`,
+  keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online", "psicólogo São Miguel Paulista", "clínica de psicologia zona leste"],
   openGraph: {
     title: site.fullName,
     description: site.tagline,
@@ -34,6 +34,7 @@ const jsonLd = {
   image: `${site.url}/og-equilibre.jpg`,
   telephone: "+55-11-91531-6550",
   sameAs: [site.instagram],
+  address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR", streetAddress: "São Miguel Paulista" },
   areaServed: "BR",
 };
 

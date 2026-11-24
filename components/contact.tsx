@@ -62,6 +62,7 @@ export function Contact() {
               <div>
                 <p className="text-cream/50">Modalidades</p>
                 <p className="mt-2 text-lg">Online e presencial</p>
+                <p className="mt-1 text-cream/70">Presencial em {site.bairro}, {site.cidade}</p>
                 <p className="mt-4 text-xs text-cream/50">Em caso de emergência emocional, ligue para o CVV (188) ou procure o serviço de saúde mais próximo.</p>
               </div>
             </div>

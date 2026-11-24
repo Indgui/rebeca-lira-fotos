@@ -27,6 +27,8 @@ export const site = {
   instagram: "https://www.instagram.com/equilibre_clinica/",
   instagramHandle: "@equilibre_clinica",
   whatsapp: "(11) 91531-6550",
+  bairro: "São Miguel Paulista",
+  cidade: "São Paulo – SP",
   bookingUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de agendar um atendimento."),
   avaliacaoUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre a avaliação neuropsicológica."),
   descricao: "Um espaço dedicado à saúde mental, ao desenvolvimento humano e ao bem-estar, com acompanhamento psicológico, avaliação neuropsicológica e psicopedagogia.",
