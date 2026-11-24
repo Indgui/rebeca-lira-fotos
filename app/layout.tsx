@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { site } from "@/lib/site";
+import { faqs, site } from "@/lib/site";
 import "@fontsource-variable/inter-tight";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.fullName} | Psicologia, Avaliação Neuropsicológica, Psicopedagogia, TEA e TDAH`,
+  title: "Clínica Equilibre | Psicologia e Neuropsicologia em São Miguel Paulista",
   description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e acompanhamento em TEA e TDAH. Atendimento online e presencial em São Miguel Paulista, São Paulo – SP.`,
   keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online", "psicólogo São Miguel Paulista", "clínica de psicologia zona leste"],
   openGraph: {
@@ -22,6 +22,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = { themeColor: "#f7f6f2" };
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -44,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="grain">
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       </body>
     </html>
   );

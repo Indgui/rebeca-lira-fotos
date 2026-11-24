@@ -38,9 +38,15 @@ export function Atendimento() {
               </FadeUp>
             ))}
           </div>
-          <p className="max-w-xl text-xl text-ink/80 md:text-2xl">
-            Independentemente da modalidade, nosso compromisso é oferecer um atendimento ético, individualizado e respeitoso.
-          </p>
+          <div className="max-w-xl">
+            <h3 className="text-2xl font-medium tracking-tight md:text-3xl">Atendimento pensado para você</h3>
+            <p className="mt-3 text-lg text-muted">
+              Cada acompanhamento considera as necessidades, a história e os objetivos de quem busca ajuda, respeitando as particularidades de cada pessoa.
+            </p>
+            <p className="mt-6 text-xl text-ink/80 md:text-2xl">
+              Independentemente da modalidade, nosso compromisso é oferecer um atendimento ético, individualizado e respeitoso.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { faqs } from "@/lib/site";
 import { LineReveal } from "./fx/reveal";
 
@@ -25,24 +24,21 @@ export function Faq() {
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
+                  aria-controls={`faq-${i}`}
                   className="flex w-full items-center justify-between gap-6 py-7 text-left text-xl font-medium tracking-tight md:text-2xl"
                 >
                   {f.q}
                   <span className={`grid size-10 shrink-0 place-items-center rounded-full border border-ink/15 transition-all duration-500 ${isOpen ? "rotate-45 bg-forest text-cream" : ""}`}>+</span>
                 </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <p className="max-w-2xl pb-8 text-lg text-muted">{f.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  id={`faq-${i}`}
+                  role="region"
+                  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(.16,1,.3,1)] ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="max-w-2xl pb-8 text-lg text-muted">{f.a}</p>
+                  </div>
+                </div>
               </div>
             );
           })}

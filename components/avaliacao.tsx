@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { avaliacao, photos, site } from "@/lib/site";
@@ -48,6 +48,33 @@ function Formato() {
   );
 }
 
+function Objetivos() {
+  return (
+    <div className="flex h-full flex-col justify-between gap-8">
+      <div>
+        <h3 className="text-3xl font-medium tracking-tight md:text-4xl">Para que serve</h3>
+        <ul className="mt-6 space-y-3">
+          {avaliacao.objetivos.map((it) => (
+            <li key={it} className="flex gap-3 border-b border-cream/10 pb-3 text-cream/85">
+              <span className="text-butter">✳</span>
+              {it}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 className="text-xl font-medium">O que você recebe ao final</h3>
+        <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+          {avaliacao.aoFinal.map((t) => (
+            <li key={t} className="rounded-full bg-butter px-4 py-1.5 text-ink">{t}</li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm text-cream/60">{avaliacao.aviso}</p>
+      </div>
+    </div>
+  );
+}
+
 function Etapa({ i }: { i: number }) {
   const e = avaliacao.etapas[i];
   return (
@@ -65,7 +92,7 @@ function Indicacoes() {
   return (
     <div className="flex h-full flex-col justify-between gap-6">
       <div>
-        <h3 className="text-3xl font-medium tracking-tight md:text-4xl">Para quem é indicada</h3>
+        <h3 className="text-3xl font-medium tracking-tight md:text-4xl">Quando é indicada</h3>
         <ul className="mt-6 space-y-3">
           {avaliacao.indicacoes.map((it) => (
             <li key={it} className="flex gap-3 border-b border-cream/10 pb-3 text-cream/85">
@@ -90,15 +117,24 @@ function Indicacoes() {
 }
 
 const panels = [
-  { el: <Intro />, w: "w-[85vw] md:w-[44vw]" },
-  { el: <Formato />, w: "w-[85vw] md:w-[36vw]" },
-  ...avaliacao.etapas.map((_, i) => ({ el: <Etapa i={i} />, w: "w-[80vw] md:w-[28vw]" })),
-  { el: <Indicacoes />, w: "w-[85vw] md:w-[38vw]" },
+  { el: <Intro />, w: "md:w-[44vw]" },
+  { el: <Formato />, w: "md:w-[36vw]" },
+  { el: <Objetivos />, w: "md:w-[38vw]" },
+  ...avaliacao.etapas.map((_, i) => ({ el: <Etapa i={i} />, w: "md:w-[28vw]" })),
+  { el: <Indicacoes />, w: "md:w-[38vw]" },
 ];
 
 export function Avaliacao() {
   const ref = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
+  const [desk, setDesk] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const on = () => setDesk(mq.matches);
+    on();
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const x = useTransform(scrollYProgress, (p) => {
     const el = track.current;
@@ -108,40 +144,29 @@ export function Avaliacao() {
   });
   const bar = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
+  // Um único bloco: rolagem horizontal fixada no desktop, lista vertical no celular.
   return (
     <section id="avaliacao" className="bg-forest text-cream">
-      {/* desktop: rolagem horizontal fixada */}
-      <div ref={ref} className="relative hidden h-[420vh] md:block">
-        <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
-          <motion.div ref={track} style={{ x }} className="flex gap-6 px-8 will-change-transform">
+      <div ref={ref} className="relative md:h-[480vh]">
+        <div className="px-4 py-24 md:sticky md:top-0 md:flex md:h-screen md:flex-col md:justify-center md:overflow-hidden md:p-0">
+          <motion.div ref={track} style={desk ? { x } : undefined} className="flex flex-col gap-6 md:flex-row md:px-8 md:will-change-transform">
             {panels.map((p, i) => (
-              <div
+              <FadeUp
                 key={i}
-                className={`${p.w} h-[72vh] shrink-0 rounded-[2rem] border border-cream/10 p-10 ${i === 0 ? "border-none p-0 pr-10" : "bg-cream/[.04]"}`}
+                className={`${p.w} md:h-[72vh] md:shrink-0 ${i === 0 ? "md:pr-10" : "rounded-[2rem] border border-cream/10 bg-cream/[.04] p-7 md:p-10"}`}
               >
                 {p.el}
-              </div>
+              </FadeUp>
             ))}
-            <div className="relative h-[72vh] w-[30vw] shrink-0 overflow-hidden rounded-[2rem]">
+            <div className="relative hidden h-[72vh] w-[30vw] shrink-0 overflow-hidden rounded-[2rem] md:block">
               <Image src={photos.avaliacaoPainel.src} alt={photos.avaliacaoPainel.alt} fill sizes="30vw" className="object-cover" />
             </div>
           </motion.div>
-          <div className="mx-8 mt-8 h-px bg-cream/15">
+          <div className="mx-8 mt-8 hidden h-px bg-cream/15 md:block">
             <motion.div style={{ width: bar }} className="h-px bg-butter" />
           </div>
         </div>
       </div>
-
-      {/* celular: lista vertical */}
-      <div className="space-y-6 px-4 py-24 md:hidden">
-        <FadeUp><Intro /></FadeUp>
-        {panels.slice(1).map((p, i) => (
-          <FadeUp key={i}>
-            <div className="rounded-[2rem] border border-cream/10 bg-cream/[.04] p-7">{p.el}</div>
-          </FadeUp>
-        ))}
-      </div>
     </section>
   );
 }
-

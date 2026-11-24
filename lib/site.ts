@@ -57,7 +57,7 @@ export const destaques = [
   { t: "Atendimento individualizado", d: "Cada plano de cuidado parte da história e das necessidades de quem chega." },
   { t: "Cuidado humanizado", d: "Escuta acolhedora, respeito e ausência de julgamentos em todo o processo." },
   { t: "Conhecimento científico", d: "Práticas fundamentadas na ciência psicológica e no Código de Ética Profissional." },
-  { t: "Diferentes fases da vida", d: "Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas atípicas." },
+  { t: "Diferentes fases da vida", d: "Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas com TEA e TDAH." },
 ];
 
 export const areas = [
@@ -91,8 +91,8 @@ export const areas = [
   {
     n: "04",
     title: "Neurodesenvolvimento — TEA e TDAH",
-    text: "Acompanhamento que respeita as particularidades e potencialidades de cada indivíduo.",
-    tags: ["Crianças e adultos atípicos", "Orientação às famílias", "Neurodiversidade"],
+    text: "Acompanhamento de pessoas com TEA e TDAH que respeita as particularidades e potencialidades de cada indivíduo.",
+    tags: ["Pessoas com TEA e TDAH", "Orientação às famílias", "Neurodiversidade"],
     tone: "bg-sage text-white",
     img: photos.tea,
     href: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre o acompanhamento em TEA e TDAH."),
@@ -103,6 +103,14 @@ export const avaliacao = {
   intro:
     "A avaliação neuropsicológica investiga diferentes funções cognitivas, emocionais e comportamentais por meio de entrevistas, observações clínicas e instrumentos específicos.",
   publico: "Crianças, adolescentes e adultos",
+  objetivos: [
+    "Compreender o funcionamento cognitivo, emocional e comportamental",
+    "Identificar dificuldades e também potencialidades",
+    "Contribuir para a investigação diagnóstica junto à equipe de saúde",
+    "Orientar intervenções, tratamentos e adaptações na escola ou no trabalho",
+  ],
+  aoFinal: ["Laudo neuropsicológico", "Sessão de devolutiva", "Orientações e encaminhamentos"],
+  aviso: "A avaliação contribui para a investigação diagnóstica, mas não substitui a análise integrada com a equipe de saúde.",
   investiga: ["Inteligência", "Memória", "Atenção", "Funções executivas", "Linguagem", "Aspectos emocionais e comportamentais"],
   indicacoes: [
     "Suspeita de TEA (Transtorno do Espectro Autista)",
@@ -134,5 +142,8 @@ export const faqs = [
   { q: "Qual é a diferença entre psicoterapia e avaliação neuropsicológica?", a: "A avaliação é um processo com começo, meio e fim, voltado a investigar e compreender o funcionamento cognitivo, emocional e comportamental. A psicoterapia é um acompanhamento contínuo. Muitas vezes, a avaliação ajuda a direcionar o tratamento." },
   { q: "A avaliação neuropsicológica confirma o diagnóstico de TEA ou TDAH?", a: "Ela fornece informações importantes que contribuem para o diagnóstico, que é construído em conjunto com a equipe de saúde, como neurologistas ou psiquiatras, quando necessário." },
   { q: "A clínica atende por convênio?", a: "A clínica está em processo de credenciamento junto às operadoras de saúde. Entre em contato para saber a situação atual do seu plano." },
+  { q: "Como funciona o primeiro atendimento?", a: "O primeiro encontro é uma conversa para conhecer você, entender o que motivou a busca por ajuda e explicar como o acompanhamento pode ser conduzido. Com crianças, essa conversa inicial é feita com os pais ou responsáveis." },
+  { q: "Onde fica o consultório?", a: "O atendimento presencial é realizado no bairro São Miguel Paulista, em São Paulo – SP. O endereço completo é enviado no momento do agendamento. Também atendemos online." },
+  { q: "Qual é o valor da consulta e quais são as formas de pagamento?", a: "Os valores e as formas de pagamento variam conforme o serviço e a modalidade, e são informados pelo WhatsApp. Fale conosco para receber as informações." },
   { q: "Como faço para agendar?", a: "É só chamar no WhatsApp (11) 91531-6550 ou mandar uma mensagem no Instagram @equilibre_clinica. Respondemos com as opções de horário disponíveis." },
 ];
