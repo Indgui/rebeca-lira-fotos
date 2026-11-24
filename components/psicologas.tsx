@@ -1,5 +1,6 @@
 import { psicologas } from "@/lib/site";
 import { FadeUp, ImageReveal, LineReveal } from "./fx/reveal";
+import { Arrow, LinkedIn } from "./icons";
 
 export function Psicologas() {
   return (
@@ -38,6 +39,18 @@ export function Psicologas() {
                     <FadeUp key={k} delay={k * 0.05}><p>{b}</p></FadeUp>
                   ))}
                 </div>
+                <FadeUp>
+                  <a
+                    href={p.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Perfil de ${p.nome} no LinkedIn (abre em nova aba)`}
+                    className="group mt-8 inline-flex items-center gap-3 rounded-full border border-ink/15 bg-white/70 px-6 py-3.5 font-medium text-forest transition-colors hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
+                  >
+                    <LinkedIn className="size-5" /> Ver perfil no LinkedIn
+                    <Arrow className="size-4 transition-transform group-hover:rotate-45" />
+                  </a>
+                </FadeUp>
               </div>
             </article>
           ))}

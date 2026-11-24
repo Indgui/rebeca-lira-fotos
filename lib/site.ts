@@ -70,6 +70,7 @@ export const psicologas = [
     nome: "Rebeca Lira",
     funcao: "Psicóloga",
     crp: "CRP 06/202525",
+    linkedin: "https://www.linkedin.com/in/rebeca-lira-224757243/",
     foto: { src: "/rebeca-lira.webp", alt: "Rebeca Lira, psicóloga, sorrindo" },
     destaques: ["Atendimento presencial e on-line", "Avaliação neuropsicológica", "Supervisão ABA"],
     bio: [
@@ -83,6 +84,7 @@ export const psicologas = [
     nome: "Juçara Lira",
     funcao: "Psicóloga",
     crp: "CRP 06/12894",
+    linkedin: "https://www.linkedin.com/in/ju%C3%A7ara-lira-89b7aa85/",
     foto: { src: "/jucara-lira.webp", alt: "Juçara Lira, psicóloga, de braços cruzados e sorrindo" },
     destaques: ["Saúde Mental e Psiquiatria (IPq-HC)", "Atendimento Psicológico Domiciliar (PUC-SP)", "Atendimento clínico"],
     bio: [
