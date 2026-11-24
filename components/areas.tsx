@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, type MotionValue } from "motion/react";
 import { areas } from "@/lib/site";
 import { LineReveal } from "./fx/reveal";
+import { Arrow } from "./icons";
 
 function Card({ a, i, total, progress }: { a: (typeof areas)[number]; i: number; total: number; progress: MotionValue<number> }) {
   const scale = useTransform(progress, [i / total, 1], [1, 1 - (total - i) * 0.04]);
@@ -27,6 +28,14 @@ function Card({ a, i, total, progress }: { a: (typeof areas)[number]; i: number;
                 <li key={t} className="rounded-full border border-current/25 px-4 py-1.5 text-sm">{t}</li>
               ))}
             </ul>
+            <a
+              href={a.href}
+              {...(a.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="group mt-8 inline-flex items-center gap-2 rounded-full bg-current/10 px-5 py-3 font-medium"
+            >
+              <span>Saiba mais</span>
+              <Arrow className="size-4 transition-transform group-hover:rotate-45" />
+            </a>
           </div>
         </div>
         <div className="relative h-48 md:h-auto">
@@ -41,13 +50,14 @@ export function Areas() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   return (
-    <section id="atuacao" className="px-4 md:px-8">
+    <section id="especialidades" className="px-4 md:px-8">
       <div className="mx-auto max-w-[1400px] pt-10">
-        <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Áreas de atuação )</span>
+        <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Nossas especialidades )</span>
         <LineReveal
-          lines={["Cuidado para cada fase", <span key="b" className="serif italic text-clay">e cada forma de ser.</span>]}
-          className="text-[clamp(2.6rem,6vw,6rem)] font-medium leading-[0.95] tracking-[-0.04em]"
+          lines={["Cuidado individualizado", <span key="b" className="serif italic text-clay">para diferentes necessidades</span>, "e momentos da vida."]}
+          className="text-[clamp(2.4rem,5.4vw,5.4rem)] font-medium leading-[0.95] tracking-[-0.04em]"
         />
+        <p className="mt-6 max-w-xl text-lg text-muted">Conheça nossos serviços e encontre o acompanhamento mais adequado às suas necessidades.</p>
       </div>
       <div ref={ref} className="relative">
         {areas.map((a, i) => (

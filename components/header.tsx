@@ -51,7 +51,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="hidden items-center gap-2 rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-clay sm:inline-flex"
               >
-                <WhatsApp className="size-4" /> Agendar
+                <WhatsApp className="size-4" /> Agendar atendimento
               </a>
             </Magnetic>
             <button
@@ -91,9 +91,9 @@ export function Header() {
                       initial={{ y: "100%" }}
                       animate={{ y: "0%" }}
                       transition={{ duration: 0.8, ease, delay: 0.25 + i * 0.06 }}
-                      className="group flex items-baseline justify-between py-3 md:py-4"
+                      className="group flex items-baseline justify-between py-2.5 md:py-3"
                     >
-                      <span className="text-[clamp(2.2rem,7vw,5.5rem)] font-medium leading-none tracking-tight transition-transform duration-500 group-hover:translate-x-4">
+                      <span className="text-[clamp(1.7rem,4.6vw,3.6rem)] font-medium leading-none tracking-tight transition-transform duration-500 group-hover:translate-x-4">
                         {l.label}
                       </span>
                       <span className="text-sm opacity-50">0{i + 1}</span>

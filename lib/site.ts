@@ -28,75 +28,80 @@ export const site = {
   instagramHandle: "@equilibre_clinica",
   whatsapp: "(11) 91531-6550",
   bookingUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de agendar um atendimento."),
-  avaliacaoUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber sobre a avaliação neuropsicológica."),
+  avaliacaoUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre a avaliação neuropsicológica."),
+  descricao: "Um espaço dedicado à saúde mental, ao desenvolvimento humano e ao bem-estar, com acompanhamento psicológico, avaliação neuropsicológica e psicopedagogia.",
 };
 
 export const nav = [
-  { href: "#sobre", label: "A clínica" },
-  { href: "#atuacao", label: "Atuação" },
-  { href: "#avaliacao", label: "Avaliação" },
+  { href: "#inicio", label: "Início" },
+  { href: "#sobre", label: "A Clínica" },
+  { href: "#especialidades", label: "Especialidades" },
+  { href: "#avaliacao", label: "Avaliação Neuropsicológica" },
   { href: "#atendimento", label: "Atendimento" },
-  { href: "#duvidas", label: "Dúvidas" },
+  { href: "#duvidas", label: "FAQ" },
+  { href: "#contato", label: "Contato" },
 ];
 
 export const marquee = [
-  "Psicologia",
+  "Psicoterapia",
   "Avaliação Neuropsicológica",
   "Psicopedagogia",
-  "Crianças & Adolescentes",
-  "Adultos & Idosos",
-  "Casais",
-  "TEA & TDAH",
-  "Online & Presencial",
+  "Saúde Emocional",
+  "Neurodesenvolvimento",
+  "TEA e TDAH",
 ];
 
-export const numbers = [
-  { value: 15, prefix: "12–", suffix: "", label: "sessões na avaliação neuropsicológica" },
-  { value: 50, prefix: "40–", suffix: "", label: "minutos de duração aproximada por sessão" },
-  { value: 2, suffix: "", label: "formatos: online e presencial" },
-  { value: 5, suffix: "", label: "públicos: crianças, adolescentes, adultos, idosos e casais" },
+export const destaques = [
+  { t: "Atendimento individualizado", d: "Cada plano de cuidado parte da história e das necessidades de quem chega." },
+  { t: "Cuidado humanizado", d: "Escuta acolhedora, respeito e ausência de julgamentos em todo o processo." },
+  { t: "Conhecimento científico", d: "Práticas fundamentadas na ciência psicológica e no Código de Ética Profissional." },
+  { t: "Diferentes fases da vida", d: "Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas atípicas." },
 ];
 
 export const areas = [
   {
     n: "01",
     title: "Psicoterapia",
-    text: "Atendimento para crianças, adolescentes, adultos, idosos e casais. Um espaço seguro para compreender emoções, relações e comportamentos.",
+    text: "Um espaço para compreender sentimentos, desenvolver autoconhecimento e trabalhar questões emocionais e comportamentais.",
     tags: ["Crianças e adolescentes", "Adultos e idosos", "Casais"],
     tone: "bg-peach text-ink",
     img: photos.adultos,
+    href: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre psicoterapia."),
   },
   {
     n: "02",
     title: "Avaliação Neuropsicológica",
-    text: "Investigação das funções cognitivas, emocionais e comportamentais para compreender dificuldades e orientar o cuidado.",
-    tags: ["Atenção e memória", "Funções executivas", "Investigação de TEA e TDAH"],
+    text: "Investigação das funções cognitivas, emocionais e comportamentais para compreender dificuldades e potencialidades.",
+    tags: ["Crianças, adolescentes e adultos", "Laudo e devolutiva"],
     tone: "bg-forest text-cream",
     img: photos.avaliacao,
+    href: "#avaliacao",
   },
   {
     n: "03",
     title: "Psicopedagogia",
-    text: "Acompanhamento das dificuldades de aprendizagem, com estratégias para o desenvolvimento escolar e parceria com a família e a escola.",
+    text: "Acompanhamento das dificuldades de aprendizagem e desenvolvimento de estratégias individualizadas.",
     tags: ["Dificuldades de aprendizagem", "Leitura, escrita e matemática", "Parceria com a escola"],
     tone: "bg-butter text-ink",
     img: photos.psicopedagogia,
+    href: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre psicopedagogia."),
   },
   {
     n: "04",
-    title: "TEA & TDAH",
-    text: "Cuidado para crianças e adultos atípicos, com olhar atento ao neurodesenvolvimento e orientação para as famílias.",
-    tags: ["Neurodesenvolvimento", "Orientação parental", "Neurodiversidade"],
+    title: "Neurodesenvolvimento — TEA e TDAH",
+    text: "Acompanhamento que respeita as particularidades e potencialidades de cada indivíduo.",
+    tags: ["Crianças e adultos atípicos", "Orientação às famílias", "Neurodiversidade"],
     tone: "bg-sage text-white",
     img: photos.tea,
+    href: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber mais sobre o acompanhamento em TEA e TDAH."),
   },
 ];
 
 export const avaliacao = {
   intro:
-    "A avaliação neuropsicológica investiga as funções cognitivas, como inteligência, memória, atenção, linguagem e funções executivas, além de aspectos emocionais, comportamentais e de personalidade. Ela ajuda a compreender dificuldades, identificar potencialidades e orientar os próximos passos do cuidado, para crianças, adolescentes e adultos.",
-  formato:
-    "É realizada ao longo de 12 a 15 sessões, em média, com duração aproximada de 40 a 50 minutos cada. São utilizados instrumentos e testes psicológicos escolhidos conforme a demanda e os objetivos da avaliação.",
+    "A avaliação neuropsicológica investiga diferentes funções cognitivas, emocionais e comportamentais por meio de entrevistas, observações clínicas e instrumentos específicos.",
+  publico: "Crianças, adolescentes e adultos",
+  investiga: ["Inteligência", "Memória", "Atenção", "Funções executivas", "Linguagem", "Aspectos emocionais e comportamentais"],
   indicacoes: [
     "Suspeita de TEA (Transtorno do Espectro Autista)",
     "Suspeita de TDAH",
@@ -105,21 +110,27 @@ export const avaliacao = {
     "Quando a escola, o médico ou outro profissional solicita",
   ],
   etapas: [
-    { t: "Entrevista inicial", d: "Conversa sobre a história, as queixas e a rotina. Com crianças, é feita com os pais ou responsáveis." },
-    { t: "Testagem", d: "Aplicação de instrumentos e testes psicológicos que investigam inteligência, memória, atenção, funções executivas, personalidade, entre outros." },
-    { t: "Análise integrada", d: "Os resultados dos testes, as observações e as informações da família, escola ou outros profissionais são analisados em conjunto." },
-    { t: "Laudo e devolutiva", d: "Elaboração do laudo neuropsicológico e encontro de devolutiva para explicar os resultados com clareza, com orientações e encaminhamentos." },
+    { t: "Entrevista inicial", d: "Conhecimento da história e das necessidades do paciente." },
+    { t: "Aplicação dos instrumentos", d: "Realização de testes e procedimentos adequados à demanda." },
+    { t: "Análise dos resultados", d: "Integração das informações coletadas durante a avaliação." },
+    { t: "Laudo e devolutiva", d: "Apresentação dos resultados e orientações sobre os próximos passos." },
   ],
 };
 
+export const comoComecar = [
+  { t: "Entre em contato", d: "Envie uma mensagem pelo WhatsApp." },
+  { t: "Escolha seu atendimento", d: "Conheça as modalidades e os serviços disponíveis." },
+  { t: "Inicie seu acompanhamento", d: "Converse com a profissional sobre suas necessidades e objetivos." },
+];
+
 export const faqs = [
-  { q: "Quem a clínica atende?", a: "Atendemos crianças, adolescentes, adultos, idosos e casais, incluindo crianças e adultos atípicos, como pessoas com TEA e TDAH." },
-  { q: "A terapia online funciona tão bem quanto a presencial?", a: "Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e mantém o mesmo cuidado, sigilo e qualidade. A escolha depende do que for mais confortável para você." },
-  { q: "Como funciona o atendimento infantil?", a: "Com crianças, a terapia usa recursos lúdicos, como brincadeiras e desenhos, para facilitar a expressão. Os pais ou responsáveis participam de encontros de orientação ao longo do processo." },
-  { q: "Desconfio que tenho TDAH ou TEA. Posso procurar atendimento?", a: "Pode, sim. Muitas pessoas chegam com essa dúvida. Investigamos com cuidado o seu funcionamento e, quando necessário, há orientação e encaminhamento para outros profissionais." },
-  { q: "Quantas sessões tem a avaliação neuropsicológica?", a: "A avaliação é realizada ao longo de 12 a 15 sessões, em média, com duração aproximada de 40 a 50 minutos cada, incluindo entrevista, testagem, análise e devolutiva com laudo." },
-  { q: "Qual a diferença entre avaliação neuropsicológica e terapia?", a: "A avaliação é um processo com começo, meio e fim, voltado a investigar e compreender o funcionamento cognitivo e emocional. A terapia é um acompanhamento contínuo. Muitas vezes, a avaliação ajuda a direcionar o tratamento." },
-  { q: "A avaliação neuropsicológica dá diagnóstico?", a: "Ela fornece informações importantes que contribuem para o diagnóstico de condições como TEA e TDAH, construído em conjunto com a equipe de saúde, como neurologistas ou psiquiatras, quando necessário." },
-  { q: "Vocês atendem por convênio?", a: "A clínica está em processo de credenciamento junto às operadoras de saúde. Entre em contato para saber a situação atual do seu plano." },
+  { q: "Quem pode ser atendido na Clínica Equilibre?", a: "Atendemos crianças, adolescentes, adultos, idosos e casais, incluindo pessoas com TEA, TDAH e outras condições do neurodesenvolvimento." },
+  { q: "A terapia online é eficaz?", a: "Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e mantém o mesmo cuidado, sigilo e qualidade do presencial. A escolha depende do que for mais confortável para você." },
+  { q: "Como funciona o atendimento infantil?", a: "Com crianças, o atendimento usa recursos lúdicos, como brincadeiras e desenhos, para facilitar a expressão. Os pais ou responsáveis participam de encontros de orientação ao longo do processo." },
+  { q: "Tenho suspeita de TDAH ou autismo. Posso procurar atendimento?", a: "Pode, sim. Muitas pessoas chegam com essa dúvida. Investigamos com cuidado o seu funcionamento e, quando necessário, há orientação e encaminhamento para outros profissionais." },
+  { q: "Quantas sessões são necessárias para a avaliação neuropsicológica?", a: "Em média, de 12 a 15 sessões, com duração aproximada de 40 a 50 minutos cada, incluindo entrevista, aplicação dos instrumentos, análise dos resultados e devolutiva com laudo." },
+  { q: "Qual é a diferença entre psicoterapia e avaliação neuropsicológica?", a: "A avaliação é um processo com começo, meio e fim, voltado a investigar e compreender o funcionamento cognitivo, emocional e comportamental. A psicoterapia é um acompanhamento contínuo. Muitas vezes, a avaliação ajuda a direcionar o tratamento." },
+  { q: "A avaliação neuropsicológica confirma o diagnóstico de TEA ou TDAH?", a: "Ela fornece informações importantes que contribuem para o diagnóstico, que é construído em conjunto com a equipe de saúde, como neurologistas ou psiquiatras, quando necessário." },
+  { q: "A clínica atende por convênio?", a: "A clínica está em processo de credenciamento junto às operadoras de saúde. Entre em contato para saber a situação atual do seu plano." },
   { q: "Como faço para agendar?", a: "É só chamar no WhatsApp (11) 91531-6550 ou mandar uma mensagem no Instagram @equilibre_clinica. Respondemos com as opções de horário disponíveis." },
 ];

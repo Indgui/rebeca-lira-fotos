@@ -1,15 +1,9 @@
-import { photos, site } from "@/lib/site";
+import { photos } from "@/lib/site";
 import { FadeUp, ImageReveal, LineReveal } from "./fx/reveal";
 
 const modes = [
-  { t: "Online", d: "Por videochamada, de onde você estiver, com praticidade e privacidade." },
-  { t: "Presencial", d: "Em consultório, em um ambiente tranquilo e acolhedor." },
-  { t: "Sigilo", d: "Todo atendimento segue o Código de Ética Profissional do Psicólogo." },
-];
-const steps = [
-  { t: "Entre em contato", d: "Mande uma mensagem contando o que você busca e se prefere online ou presencial." },
-  { t: "Agende a primeira sessão", d: "Combinamos o melhor dia e horário e esclareço suas dúvidas." },
-  { t: "Comece o seu processo", d: "No primeiro encontro nos conhecemos e entendemos juntos os próximos passos." },
+  { t: "Online", d: "Acompanhamento por videochamada, com praticidade e flexibilidade." },
+  { t: "Presencial", d: "Ambiente acolhedor, preparado para oferecer privacidade e tranquilidade." },
 ];
 
 export function Atendimento() {
@@ -19,8 +13,8 @@ export function Atendimento() {
         <div className="lg:col-span-5">
           <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Atendimento )</span>
           <LineReveal
-            lines={["Do jeito que", <span key="b" className="serif italic text-clay">faz sentido</span>, "para você."]}
-            className="text-[clamp(2.4rem,5vw,5rem)] font-medium leading-[0.95] tracking-[-0.04em]"
+            lines={["O cuidado que", "respeita sua rotina", <span key="b" className="serif italic text-clay">e suas necessidades.</span>]}
+            className="text-[clamp(2.2rem,3.9vw,3.8rem)] font-medium leading-[0.95] tracking-[-0.04em]"
           />
           <div className="mt-10 grid grid-cols-2 gap-4">
             <div className="relative">
@@ -44,21 +38,9 @@ export function Atendimento() {
               </FadeUp>
             ))}
           </div>
-          <div>
-            <h3 className="text-2xl font-medium tracking-tight">Como começar</h3>
-            <ol className="mt-6 grid gap-4 md:grid-cols-3">
-              {steps.map((s, i) => (
-                <FadeUp key={s.t} delay={i * 0.1}>
-                  <li className="h-full rounded-3xl bg-cream p-6">
-                    <span className="serif text-5xl italic text-clay">0{i + 1}</span>
-                    <h4 className="mt-3 font-semibold">{s.t}</h4>
-                    <p className="mt-1 text-sm text-muted">{s.d}</p>
-                  </li>
-                </FadeUp>
-              ))}
-            </ol>
-            <p className="mt-6 text-sm text-muted">WhatsApp {site.whatsapp} · Instagram {site.instagramHandle}</p>
-          </div>
+          <p className="max-w-xl text-xl text-ink/80 md:text-2xl">
+            Independentemente da modalidade, nosso compromisso é oferecer um atendimento ético, individualizado e respeitoso.
+          </p>
         </div>
       </div>
     </section>

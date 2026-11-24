@@ -17,10 +17,10 @@ export function Contact() {
       <motion.div style={{ borderRadius: radius }} className="relative overflow-hidden brand-gradient px-6 pb-8 pt-24 text-cream md:px-12 md:pt-32">
         <motion.div style={{ y }}>
           <div className="mx-auto max-w-[1400px]">
-            <span className="text-xs font-medium uppercase tracking-[0.25em] text-cream/60">( Contato )</span>
+            <span className="text-xs font-medium uppercase tracking-[0.25em] text-cream/60">( Entre em contato )</span>
             <div className="mt-6 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-              <h2 className="text-[clamp(3.2rem,10vw,10rem)] font-medium leading-[0.88] tracking-[-0.05em]">
-                Vamos<br /><span className="serif italic text-butter">conversar?</span>
+              <h2 className="text-[clamp(2.6rem,6.4vw,6.6rem)] font-medium leading-[0.88] tracking-[-0.05em]">
+                Sua jornada de cuidado<br /><span className="serif italic text-butter">pode começar com uma conversa.</span>
               </h2>
               <Magnetic strength={0.45}>
                 <a
@@ -32,16 +32,20 @@ export function Contact() {
                 >
                   <span className="flex flex-col items-center gap-2">
                     <WhatsApp className="size-7" />
-                    Agendar<br />uma sessão
+                    Agende pelo<br />WhatsApp
                   </span>
                 </a>
               </Magnetic>
             </div>
-            <p className="mt-8 max-w-md text-lg text-cream/70">
-              Dar o primeiro passo pode ser difícil, mas você não precisa fazer isso sozinho(a). Mande uma mensagem e tiramos suas dúvidas.
+            <p className="mt-8 max-w-xl text-lg text-cream/75">
+              Se você procura acompanhamento psicológico, avaliação neuropsicológica ou orientação especializada, estamos aqui para ouvir e ajudar a encontrar o caminho mais adequado.
             </p>
 
-            <div className="mt-20 grid gap-10 border-t border-cream/15 pt-10 text-sm md:grid-cols-3">
+            <div className="mt-20 grid gap-10 border-t border-cream/15 pt-10 text-sm md:grid-cols-4">
+              <div>
+                <img src="/logo-equilibre.svg" alt="Clínica Equilibre Mente & Corpo" className="h-11 w-auto brightness-0 invert" />
+                <p className="mt-4 max-w-xs text-cream/70">{site.descricao}</p>
+              </div>
               <div>
                 <p className="text-cream/50">Contato</p>
                 <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-2 text-lg hover:text-butter"><WhatsApp className="size-4" /> {site.whatsapp}</a>
@@ -56,8 +60,8 @@ export function Contact() {
                 </ul>
               </div>
               <div>
-                <p className="text-cream/50">Atendimento</p>
-                <p className="mt-2 text-lg">Online & presencial</p>
+                <p className="text-cream/50">Modalidades</p>
+                <p className="mt-2 text-lg">Online e presencial</p>
                 <p className="mt-4 text-xs text-cream/50">Em caso de emergência emocional, ligue para o CVV (188) ou procure o serviço de saúde mais próximo.</p>
               </div>
             </div>
@@ -66,7 +70,7 @@ export function Contact() {
             <p className="serif whitespace-nowrap text-center text-[22vw] italic leading-[0.8] text-cream/15">Equilibre</p>
           </div>
           <div className="mx-auto mt-4 flex max-w-[1400px] flex-wrap justify-between gap-2 text-xs text-cream/50">
-            <span>© {new Date().getFullYear()} {site.legalName}</span>
+            <span>© {new Date().getFullYear()} {site.legalName} · Todos os direitos reservados</span>
             <span>{site.rt}</span>
             <span>Fotos ilustrativas: Unsplash e Pexels</span>
             <a href="#inicio" className="md:mr-16">Voltar ao topo ↑</a>

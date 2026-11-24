@@ -11,10 +11,10 @@ export function Faq() {
     <section id="duvidas" className="px-4 py-28 md:px-8 md:py-40">
       <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Dúvidas )</span>
+          <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-muted">( Perguntas frequentes )</span>
           <LineReveal
-            lines={["Perguntas", <span key="b" className="serif italic text-clay">frequentes</span>]}
-            className="text-[clamp(2.4rem,5vw,5rem)] font-medium leading-[0.95] tracking-[-0.04em]"
+            lines={["Informação e", <span key="b" className="serif italic text-clay">tranquilidade</span>, "para dar o próximo passo."]}
+            className="text-[clamp(2.2rem,4vw,4rem)] font-medium leading-[0.95] tracking-[-0.04em]"
           />
         </div>
         <div className="border-t border-ink/10 lg:col-span-8">

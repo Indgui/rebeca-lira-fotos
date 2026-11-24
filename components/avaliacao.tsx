@@ -12,9 +12,9 @@ function Intro() {
   return (
     <div className="flex h-full flex-col justify-between">
       <div>
-        <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-cream/60">( Avaliação Neuropsicológica )</span>
+        <span className="mb-6 block text-xs font-medium uppercase tracking-[0.25em] text-cream/60">( Avaliação especializada )</span>
         <h2 className="text-[clamp(2.4rem,5vw,5rem)] font-medium leading-[0.95] tracking-[-0.04em]">
-          Entender como o cérebro funciona para <span className="serif italic text-butter">cuidar melhor.</span>
+          Compreender o funcionamento da mente é <span className="serif italic text-butter">ampliar possibilidades de cuidado.</span>
         </h2>
       </div>
       <p className="max-w-lg text-lg text-cream/75">{avaliacao.intro}</p>
@@ -28,19 +28,22 @@ function Formato() {
       <div className="grid grid-cols-2 gap-4">
         <div className="rounded-3xl bg-cream/10 p-6">
           <div className="text-4xl font-medium leading-none tracking-tighter sm:text-5xl md:text-6xl">12–15</div>
-          <p className="mt-2 text-cream/70">sessões</p>
+          <p className="mt-2 text-cream/70">sessões, em média</p>
         </div>
         <div className="rounded-3xl bg-butter p-6 text-ink">
           <div className="text-4xl font-medium leading-none tracking-tighter sm:text-5xl md:text-6xl">40–50</div>
-          <p className="mt-2 text-ink/70">minutos cada</p>
+          <p className="mt-2 text-ink/70">minutos por sessão</p>
         </div>
       </div>
-      <p className="text-lg text-cream/80">{avaliacao.formato}</p>
+      <p className="text-cream/80"><span className="text-cream/55">Público:</span> {avaliacao.publico}</p>
+      <div>
+      <h3 className="mb-3 text-xl font-medium">O que é investigado?</h3>
       <ul className="flex flex-wrap gap-2 text-sm">
-        {["Inteligência", "Memória", "Atenção", "Funções executivas", "Personalidade", "Linguagem"].map((t) => (
+        {avaliacao.investiga.map((t) => (
           <li key={t} className="rounded-full border border-cream/25 px-4 py-1.5">{t}</li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
@@ -79,7 +82,7 @@ function Indicacoes() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 rounded-full bg-butter px-7 py-4 font-medium text-ink transition-colors hover:bg-cream"
         >
-          <WhatsApp className="size-5" /> Quero saber sobre a avaliação
+          <WhatsApp className="size-5" /> Quero saber mais sobre a avaliação
         </a>
       </Magnetic>
     </div>

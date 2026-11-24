@@ -49,14 +49,14 @@ export function Hero() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-sage opacity-70" />
               <span className="relative inline-flex size-2 rounded-full bg-sage" />
             </span>
-            Agenda aberta · Online &amp; presencial
+            Cuidado especializado para todas as fases da vida
           </motion.div>
 
-          <h1 className="text-[clamp(2.9rem,7vw,7.8rem)] font-medium leading-[0.92] tracking-[-0.045em] text-forest">
-            <Line i={0} ready={ready}>Cuidar da mente</Line>
+          <h1 className="text-[clamp(2.5rem,5.6vw,6.2rem)] font-medium leading-[0.92] tracking-[-0.045em] text-forest">
+            <Line i={0} ready={ready}>Sua saúde emocional</Line>
             <Line i={1} ready={ready}>
               <span className="inline-flex items-center gap-[0.2em] whitespace-nowrap">
-                é cuidar
+                merece atenção
                 <motion.span
                   initial={{ width: 0, opacity: 0 }}
                   animate={ready ? { width: "1.25em", opacity: 1 } : {}}
@@ -71,7 +71,7 @@ export function Hero() {
                 </motion.span>
               </span>
             </Line>
-            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">de quem você é.</Line>
+            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">cuidado e compreensão.</Line>
           </h1>
         </motion.div>
 
@@ -104,8 +104,8 @@ export function Hero() {
         transition={{ duration: 1, ease, delay: 0.8 }}
         className="relative mx-auto mt-10 flex max-w-[1400px] flex-col gap-8 md:flex-row md:items-end md:justify-between"
       >
-        <p className="max-w-md text-lg text-muted">
-          {site.tagline} Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas atípicas.
+        <p className="max-w-xl text-lg text-muted">
+          Um espaço dedicado à saúde mental, ao desenvolvimento humano e ao bem-estar. Oferecemos acompanhamento psicológico, avaliação neuropsicológica e psicopedagógica, com um olhar individualizado para cada pessoa.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Magnetic>
@@ -116,11 +116,11 @@ export function Hero() {
               data-cursor="Agendar"
               className="inline-flex items-center gap-3 rounded-full bg-forest px-7 py-4 font-medium text-cream transition-colors hover:bg-sage"
             >
-              <WhatsApp className="size-5" /> Agendar pelo WhatsApp
+              <WhatsApp className="size-5" /> Agende seu atendimento
             </a>
           </Magnetic>
           <a href="#sobre" className="group inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-4 font-medium">
-            Conhecer a clínica <Arrow className="size-4 transition-transform group-hover:rotate-45" />
+            Conheça a Equilibre <Arrow className="size-4 transition-transform group-hover:rotate-45" />
           </a>
         </div>
       </motion.div>
