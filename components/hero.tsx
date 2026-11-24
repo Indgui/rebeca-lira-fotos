@@ -52,11 +52,11 @@ export function Hero() {
             Cuidado especializado para todas as fases da vida
           </motion.div>
 
-          <h1 className="text-[clamp(2.5rem,5.6vw,6.2rem)] font-medium leading-[0.92] tracking-[-0.045em] text-forest">
-            <Line i={0} ready={ready}>Sua saúde emocional</Line>
+          <h1 className="text-[clamp(2.9rem,7vw,7.8rem)] font-medium leading-[0.92] tracking-[-0.045em] text-forest">
+            <Line i={0} ready={ready}>Cuidar da mente</Line>
             <Line i={1} ready={ready}>
               <span className="inline-flex items-center gap-[0.2em] whitespace-nowrap">
-                merece atenção
+                é cuidar
                 <motion.span
                   initial={{ width: 0, opacity: 0 }}
                   animate={ready ? { width: "1.25em", opacity: 1 } : {}}
@@ -71,7 +71,7 @@ export function Hero() {
                 </motion.span>
               </span>
             </Line>
-            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">cuidado e compreensão.</Line>
+            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">de quem você é.</Line>
           </h1>
         </motion.div>
 
