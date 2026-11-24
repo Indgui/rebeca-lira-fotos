@@ -91,7 +91,7 @@ export function Hero() {
               transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             />
           </motion.div>
-          <div className="absolute -left-2 bottom-[10%] rounded-2xl bg-white/85 px-4 py-3 text-sm shadow-[0_14px_40px_rgba(0,0,0,.10)] backdrop-blur-md md:-left-6">
+          <div className="absolute bottom-[12%] left-[4%] z-10 rounded-2xl bg-white/90 px-4 py-3 text-sm shadow-[0_14px_40px_rgba(0,0,0,.12)] backdrop-blur-md md:bottom-[13%] md:left-[6%]">
             <b className="serif block text-xl italic leading-none text-forest">Equilibre</b>
             <span className="text-muted">Mente &amp; Corpo</span>
           </div>

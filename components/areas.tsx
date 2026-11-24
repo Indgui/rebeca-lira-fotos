@@ -15,13 +15,13 @@ function Card({ a, i, total, progress }: { a: (typeof areas)[number]; i: number;
         style={{ scale }}
         className={`relative grid w-full max-w-[1400px] origin-top overflow-hidden rounded-[2rem] md:h-[72vh] md:grid-cols-2 ${a.tone}`}
       >
-        <div className="flex flex-col justify-between gap-10 p-8 md:p-12">
+        <div className="relative z-10 flex min-w-0 flex-col justify-between gap-10 p-8 md:p-12">
           <div className="flex items-center justify-between text-sm opacity-70">
             <span>( {a.n} )</span>
             <span>{a.n} / 0{total}</span>
           </div>
           <div>
-            <h3 className="text-[clamp(2.2rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-[-0.03em]">{a.title}</h3>
+            <h3 className="text-[clamp(1.9rem,3.5vw,3.6rem)] font-medium leading-[0.98] tracking-[-0.03em] [overflow-wrap:anywhere]">{a.title}</h3>
             <p className="mt-5 max-w-md text-lg opacity-80">{a.text}</p>
             <ul className="mt-7 flex flex-wrap gap-2">
               {a.tags.map((t) => (
