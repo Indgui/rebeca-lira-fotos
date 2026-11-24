@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #f6f1e9;
-  --color-sand: #ece3d5;
-  --color-butter: #f3e4a6;
-  --color-peach: #f2cdb6;
-  --color-sage: #6f8f76;
-  --color-forest: #1f3329;
-  --color-clay: #c8714f;
-  --color-ink: #1b1a17;
-  --color-muted: #6b655d;
+  --color-cream: #f7f6f2;
+  --color-sand: #e9f2f5;
+  --color-butter: #f1e4bd;
+  --color-peach: #d8ecf2;
+  --color-sage: #1288b0;
+  --color-forest: #0b4f78;
+  --color-clay: #a9811f;
+  --color-ink: #14232c;
+  --color-muted: #5b6970;
 
   --font-sans: "Inter Tight Variable", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
@@ -23,6 +23,10 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 body { @apply bg-cream text-ink font-sans antialiased; }
 ::selection { @apply bg-forest text-cream; }
+
+.brand-gradient { background: linear-gradient(180deg,#0b5f92 0%,#0f86ae 55%,#16a0bc 100%); }
+.text-brand { background: linear-gradient(180deg,#0b5f92,#16a0bc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.rainbow { background: linear-gradient(90deg,#e5484d,#f2992e,#f2c430,#2ea55b,#3b82e0,#7c4dc4); }
 
 .serif { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; }
 

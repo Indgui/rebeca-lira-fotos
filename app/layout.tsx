@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { rebecaFoto, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import "@fontsource-variable/inter-tight";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -7,30 +7,32 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} · Psicóloga | Infantil, Adultos, TEA & TDAH, Avaliação Neuropsicológica`,
-  description: `${site.fullName}, psicóloga clínica (${site.crp}). Atendimento infantil e adulto, TEA e TDAH, avaliação neuropsicológica e orientação parental em ABA. Online e presencial.`,
-  keywords: ["psicóloga", "avaliação neuropsicológica", "TEA", "TDAH", "autismo", "ABA", "VB-MAPP", "psicologia infantil", "terapia online"],
+  title: `${site.fullName} | Psicologia, Avaliação Neuropsicológica, Psicopedagogia e ABA`,
+  description: `${site.name}: psicologia para crianças, adolescentes, adultos, idosos e casais, avaliação neuropsicológica, psicopedagogia e ABA. Atendimento online e presencial.`,
+  keywords: ["clínica de psicologia", "avaliação neuropsicológica", "psicopedagogia", "ABA", "TEA", "TDAH", "autismo", "terapia de casal", "psicologia infantil", "terapia online"],
   openGraph: {
-    title: `${site.name} · Psicóloga`,
+    title: site.fullName,
     description: site.tagline,
     url: site.url,
-    siteName: site.name,
+    siteName: site.fullName,
     locale: "pt_BR",
     type: "website",
-    images: [{ url: rebecaFoto, alt: site.name }],
+    images: [{ url: "/og-equilibre.jpg", width: 1200, height: 630, alt: site.fullName }],
   },
 };
 
-export const viewport: Viewport = { themeColor: "#f6f1e9" };
+export const viewport: Viewport = { themeColor: "#f7f6f2" };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Psychologist",
+  "@type": "MedicalClinic",
   name: site.fullName,
+  legalName: site.legalName,
   description: site.tagline,
   url: site.url,
+  logo: `${site.url}/logo-equilibre.svg`,
+  image: `${site.url}/og-equilibre.jpg`,
   telephone: "+55-11-97609-5404",
-  image: rebecaFoto,
   sameAs: [site.instagram],
   areaServed: "BR",
 };

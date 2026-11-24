@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
-import { rebecaFoto, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { useReady } from "./fx/preloader";
 import { Magnetic } from "./fx/magnetic";
 import { WhatsApp, Arrow } from "./icons";
+import { Infinity } from "./infinity";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -29,14 +29,17 @@ export function Hero() {
   const ready = useReady();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const imgScale = useTransform(scrollYProgress, [0, 1], [1, 0.88]);
+  const artY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const artRotate = useTransform(scrollYProgress, [0, 1], [0, -6]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
 
   return (
     <section id="inicio" ref={ref} className="relative min-h-[100svh] overflow-hidden px-4 pb-10 pt-28 md:px-8 md:pt-32">
-      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-12">
-        <motion.div style={{ y: textY }} className="lg:col-span-8">
+      <div className="pointer-events-none absolute -right-40 -top-32 size-[640px] rounded-full bg-peach/70 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 bottom-0 size-[420px] rounded-full bg-butter/50 blur-3xl" />
+
+      <div className="relative mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-12">
+        <motion.div style={{ y: textY }} className="lg:col-span-7">
           <motion.div
             initial={{ opacity: 0 }}
             animate={ready ? { opacity: 1 } : {}}
@@ -47,52 +50,47 @@ export function Hero() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-sage opacity-70" />
               <span className="relative inline-flex size-2 rounded-full bg-sage" />
             </span>
-            Agenda aberta · {site.role} · {site.crp}
+            Agenda aberta · Online &amp; presencial
           </motion.div>
 
-          <h1 className="text-[clamp(2.9rem,7.4vw,8.4rem)] font-medium leading-[0.92] tracking-[-0.045em]">
-            <Line i={0} ready={ready}>Compreender</Line>
+          <h1 className="text-[clamp(2.9rem,7vw,7.8rem)] font-medium leading-[0.92] tracking-[-0.045em] text-forest">
+            <Line i={0} ready={ready}>Cuidar da mente</Line>
             <Line i={1} ready={ready}>
-              <span className="inline-flex items-center gap-[0.18em] whitespace-nowrap">
-                emoções
+              <span className="inline-flex items-center gap-[0.2em] whitespace-nowrap">
+                é cuidar
                 <motion.span
-                  initial={{ width: 0 }}
-                  animate={ready ? { width: "1.7em" } : {}}
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={ready ? { width: "1.5em", opacity: 1 } : {}}
                   transition={{ duration: 1.1, ease, delay: 0.7 }}
-                  className="relative inline-block h-[0.8em] overflow-hidden rounded-full bg-sage align-middle"
+                  className="inline-flex items-center overflow-hidden"
                 >
-                  <Image src={rebecaFoto} alt="" fill sizes="200px" unoptimized className="scale-[1.6] object-cover object-[50%_8%]" priority />
+                  <Infinity className="h-[0.62em] w-[1.5em] shrink-0" />
                 </motion.span>
-                é o
               </span>
             </Line>
-            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">primeiro passo</Line>
-            <Line i={3} ready={ready}>para cuidar delas.</Line>
+            <Line i={2} ready={ready} className="serif italic text-clay tracking-[-0.02em]">de quem você é.</Line>
           </h1>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={ready ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.4, ease, delay: 0.35 }}
-          className="relative mx-auto aspect-[4/5] w-full max-w-[380px] self-end lg:col-span-4 lg:max-w-none"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={ready ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1.6, ease, delay: 0.3 }}
+          className="relative mx-auto w-full max-w-[420px] lg:col-span-5 lg:max-w-none"
         >
-          <motion.div style={{ scale: imgScale }} className="absolute inset-x-0 bottom-0 h-[82%] overflow-hidden rounded-t-full bg-sage">
-            <div className="absolute -bottom-20 -left-16 size-64 rounded-full bg-forest/30 blur-2xl" />
-          </motion.div>
-          <motion.div style={{ y: imgY }} className="absolute inset-0">
-            <Image
-              src={rebecaFoto}
-              alt="Rebeca Lira, psicóloga"
-              fill
-              priority
-              sizes="440px" unoptimized
-              className="object-contain object-bottom"
+          <motion.div style={{ y: artY, rotate: artRotate }} className="relative aspect-square">
+            <div className="absolute inset-[6%] rounded-full bg-white/70 shadow-[0_40px_120px_-40px_rgba(11,79,120,.45)] backdrop-blur" />
+            <motion.img
+              src="/simbolo-equilibre.svg"
+              alt="Símbolo da Clínica Equilibre: a letra psi ao lado de um perfil com o cérebro em destaque"
+              className="absolute inset-[16%] h-[68%] w-[68%] object-contain"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             />
           </motion.div>
-          <div className="absolute -left-4 bottom-[18%] rounded-2xl bg-cream/80 px-4 py-3 text-sm shadow-[0_14px_40px_rgba(0,0,0,.12)] backdrop-blur-md">
-            <b className="serif block text-xl italic leading-none">{site.fullName}</b>
-            <span className="text-muted">{site.crp}</span>
+          <div className="absolute -left-2 bottom-[10%] rounded-2xl bg-white/85 px-4 py-3 text-sm shadow-[0_14px_40px_rgba(0,0,0,.10)] backdrop-blur-md md:-left-6">
+            <b className="serif block text-xl italic leading-none text-forest">Equilibre</b>
+            <span className="text-muted">Mente &amp; Corpo</span>
           </div>
         </motion.div>
       </div>
@@ -101,10 +99,10 @@ export function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={ready ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, ease, delay: 0.8 }}
-        className="mx-auto mt-10 flex max-w-[1400px] flex-col gap-8 md:flex-row md:items-end md:justify-between"
+        className="relative mx-auto mt-10 flex max-w-[1400px] flex-col gap-8 md:flex-row md:items-end md:justify-between"
       >
         <p className="max-w-md text-lg text-muted">
-          {site.tagline} Infantil, adultos, TEA &amp; TDAH, avaliação neuropsicológica e orientação para pais. Online e presencial.
+          {site.tagline} Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas atípicas.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Magnetic>
@@ -113,13 +111,13 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               data-cursor="Agendar"
-              className="inline-flex items-center gap-3 rounded-full bg-forest px-7 py-4 font-medium text-cream transition-colors hover:bg-clay"
+              className="inline-flex items-center gap-3 rounded-full bg-forest px-7 py-4 font-medium text-cream transition-colors hover:bg-sage"
             >
               <WhatsApp className="size-5" /> Agendar pelo WhatsApp
             </a>
           </Magnetic>
           <a href="#sobre" className="group inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-4 font-medium">
-            Conhecer o trabalho <Arrow className="size-4 transition-transform group-hover:rotate-45" />
+            Conhecer a clínica <Arrow className="size-4 transition-transform group-hover:rotate-45" />
           </a>
         </div>
       </motion.div>

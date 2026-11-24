@@ -1,13 +1,11 @@
 // Dados e textos do site. Edite aqui.
 
-/** Fotos ilustrativas (Unsplash, licença livre para uso comercial). A foto da Rebeca aparece só no topo. */
+/** Fotos ilustrativas (Unsplash, licença livre para uso comercial). */
 const un = (id: string, w = 1400) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
-/** Foto da Rebeca (fundo removido), hospedada no GitHub e servida pelo jsDelivr. */
-export const rebecaFoto = "https://cdn.jsdelivr.net/gh/Indgui/rebeca-lira-fotos@a57b9d731125da11582b0b225eb1741370526517/public/rebeca-recorte.webp";
-
 export const photos = {
   sobre: { src: un("1758273240373-370993d0275d"), alt: "Psicóloga escutando com atenção uma jovem durante a sessão" },
   infantil: { src: un("1758273240331-745ccab011a2"), alt: "Terapeuta conversando com uma menina no sofá" },
+  psicopedagogia: { src: un("1758598737516-ffd38ba74838"), alt: "Mãe e filho desenhando juntos à mesa" },
   adultos: { src: un("1758273240631-59d44c8f5b66"), alt: "Mulher conversando com a terapeuta no consultório" },
   tea: { src: un("1758598737955-7c8a9556706a"), alt: "Mulher e criança montando blocos coloridos juntas" },
   avaliacao: { src: un("1574492909706-09f2b2f0d909"), alt: "Menino concentrado montando um quebra-cabeça" },
@@ -20,22 +18,23 @@ export const photos = {
 const wa = (msg: string) => "https://wa.me/5511976095404?text=" + encodeURIComponent(msg);
 
 export const site = {
-  name: "Rebeca Lira",
-  fullName: "Rebeca Lira Araujo",
-  role: "Psicóloga Clínica",
-  crp: "CRP 06/202525",
-  tagline: "Te ajudo a compreender emoções, comportamento e neurodesenvolvimento.",
-  url: "https://rebeca-lira.vercel.app",
-  instagram: "https://www.instagram.com/psi_beca/",
-  instagramHandle: "@psi_beca",
+  name: "Clínica Equilibre",
+  fullName: "Clínica Equilibre | Mente & Corpo",
+  legalName: "Equilibre Mente e Corpo Ltda.",
+  tagline: "Psicologia, avaliação neuropsicológica, psicopedagogia e ABA para todas as fases da vida.",
+  // Responsável técnica (exigência do CFP para serviços de psicologia)
+  rt: "Responsável técnica: Rebeca Lira Araujo · Psicóloga · CRP 06/202525",
+  url: "https://rebeca-lira.vercel.app", // troque pelo domínio final
+  instagram: "https://www.instagram.com/equilibre_clinica/",
+  instagramHandle: "@equilibre_clinica",
   whatsapp: "(11) 97609-5404",
-  bookingUrl: wa("Olá, Rebeca! Vim pelo site e gostaria de agendar uma sessão."),
-  avaliacaoUrl: wa("Olá, Rebeca! Vim pelo site e gostaria de saber sobre a avaliação neuropsicológica."),
-  abaUrl: wa("Olá, Rebeca! Vim pelo site e gostaria de saber sobre orientação parental e ABA."),
+  bookingUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de agendar um atendimento."),
+  avaliacaoUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber sobre a avaliação neuropsicológica."),
+  abaUrl: wa("Olá! Vim pelo site da Clínica Equilibre e gostaria de saber sobre ABA e orientação parental."),
 };
 
 export const nav = [
-  { href: "#sobre", label: "Sobre" },
+  { href: "#sobre", label: "A clínica" },
   { href: "#atuacao", label: "Atuação" },
   { href: "#avaliacao", label: "Avaliação" },
   { href: "#aba", label: "ABA para pais" },
@@ -44,13 +43,14 @@ export const nav = [
 ];
 
 export const marquee = [
-  "Psicologia Infantil",
-  "Adultos",
-  "TEA",
-  "TDAH",
+  "Psicologia",
   "Avaliação Neuropsicológica",
-  "Orientação Parental",
+  "Psicopedagogia",
   "ABA",
+  "Crianças & Adolescentes",
+  "Adultos & Idosos",
+  "Casais",
+  "TEA & TDAH",
   "Online & Presencial",
 ];
 
@@ -58,41 +58,41 @@ export const numbers = [
   { value: 10, suffix: "", label: "sessões na avaliação neuropsicológica" },
   { value: 50, prefix: "40–", suffix: "", label: "minutos de duração aproximada por sessão" },
   { value: 2, suffix: "", label: "formatos: online e presencial" },
-  { value: 4, suffix: "", label: "frentes de cuidado: infantil, adultos, TEA/TDAH e avaliação" },
+  { value: 5, suffix: "", label: "públicos: crianças, adolescentes, adultos, idosos e casais" },
 ];
 
 export const areas = [
   {
     n: "01",
-    title: "Psicologia Infantil",
-    text: "Acompanhamento de crianças por meio do brincar e da escuta, sempre em parceria com pais e responsáveis.",
-    tags: ["Regulação emocional", "Comportamento e rotina", "Orientação aos pais"],
-    tone: "bg-butter text-ink",
-    img: photos.infantil,
-  },
-  {
-    n: "02",
-    title: "Psicoterapia para Adultos",
-    text: "Um espaço para olhar para suas emoções, relações e escolhas com mais clareza e acolhimento.",
-    tags: ["Ansiedade e estresse", "Autoconhecimento", "Relações e mudanças de vida"],
+    title: "Psicoterapia",
+    text: "Atendimento para crianças, adolescentes, adultos, idosos e casais. Um espaço seguro para compreender emoções, relações e comportamentos.",
+    tags: ["Crianças e adolescentes", "Adultos e idosos", "Casais"],
     tone: "bg-peach text-ink",
     img: photos.adultos,
   },
   {
-    n: "03",
-    title: "TEA & TDAH",
-    text: "Acompanhamento de crianças e adultos neurodivergentes, com análise do comportamento e intervenção precoce no autismo.",
-    tags: ["Compreensão do próprio funcionamento", "Estratégias para o dia a dia", "Apoio à família"],
-    tone: "bg-sage text-white",
-    img: photos.tea,
-  },
-  {
-    n: "04",
+    n: "02",
     title: "Avaliação Neuropsicológica",
     text: "Investigação das funções cognitivas, emocionais e comportamentais para compreender dificuldades e orientar o cuidado.",
     tags: ["Atenção e memória", "Funções executivas", "Investigação de TEA e TDAH"],
     tone: "bg-forest text-cream",
     img: photos.avaliacao,
+  },
+  {
+    n: "03",
+    title: "Psicopedagogia",
+    text: "Acompanhamento das dificuldades de aprendizagem, com estratégias para o desenvolvimento escolar e parceria com a família e a escola.",
+    tags: ["Dificuldades de aprendizagem", "Leitura, escrita e matemática", "Parceria com a escola"],
+    tone: "bg-butter text-ink",
+    img: photos.psicopedagogia,
+  },
+  {
+    n: "04",
+    title: "ABA, TEA & TDAH",
+    text: "Cuidado para crianças e adultos atípicos, com análise do comportamento, intervenção precoce e orientação para as famílias.",
+    tags: ["Intervenção ABA", "Orientação parental", "Neurodiversidade"],
+    tone: "bg-sage text-white",
+    img: photos.tea,
   },
 ];
 
@@ -118,7 +118,7 @@ export const avaliacao = {
 
 export const aba = {
   intro:
-    "Um caminho acolhedor para entender e apoiar o desenvolvimento do seu filho. Ajudo pais e mães a compreender os marcos do desenvolvimento dentro da terapia ABA e a participar ativamente desse processo.",
+    "Um caminho acolhedor para entender e apoiar o desenvolvimento do seu filho. Ajudamos pais e mães a compreender os marcos do desenvolvimento dentro da terapia ABA e a participar ativamente desse processo.",
   vbmapp:
     "O VB-MAPP (Verbal Behavior Milestones Assessment and Placement Program) é uma ferramenta de avaliação que mapeia habilidades de linguagem e aprendizado em crianças. Ele ajuda a identificar em que ponto do desenvolvimento a criança está e quais são os próximos passos terapêuticos.",
   marcos: [
@@ -139,11 +139,13 @@ export const aba = {
 };
 
 export const faqs = [
+  { q: "Quem a clínica atende?", a: "Atendemos crianças, adolescentes, adultos, idosos e casais, incluindo crianças e adultos atípicos, como pessoas com TEA e TDAH." },
   { q: "A terapia online funciona tão bem quanto a presencial?", a: "Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e mantém o mesmo cuidado, sigilo e qualidade. A escolha depende do que for mais confortável para você." },
   { q: "Como funciona o atendimento infantil?", a: "Com crianças, a terapia usa recursos lúdicos, como brincadeiras e desenhos, para facilitar a expressão. Os pais ou responsáveis participam de encontros de orientação ao longo do processo." },
   { q: "Desconfio que tenho TDAH ou TEA. Posso procurar atendimento?", a: "Pode, sim. Muitas pessoas chegam com essa dúvida. Investigamos com cuidado o seu funcionamento e, quando necessário, há orientação e encaminhamento para outros profissionais." },
   { q: "Quantas sessões tem a avaliação neuropsicológica?", a: "A avaliação é realizada ao longo de 10 sessões, com duração aproximada de 40 a 50 minutos cada, incluindo entrevista, testagem, análise e devolutiva com laudo." },
   { q: "Qual a diferença entre avaliação neuropsicológica e terapia?", a: "A avaliação é um processo com começo, meio e fim, voltado a investigar e compreender o funcionamento cognitivo e emocional. A terapia é um acompanhamento contínuo. Muitas vezes, a avaliação ajuda a direcionar o tratamento." },
   { q: "A avaliação neuropsicológica dá diagnóstico?", a: "Ela fornece informações importantes que contribuem para o diagnóstico de condições como TEA e TDAH, construído em conjunto com a equipe de saúde, como neurologistas ou psiquiatras, quando necessário." },
-  { q: "Como faço para agendar?", a: "É só chamar no WhatsApp (11) 97609-5404 ou mandar uma mensagem no Instagram @psi_beca. Respondo com as opções de horário disponíveis." },
+  { q: "Vocês atendem por convênio?", a: "A clínica está em processo de credenciamento junto às operadoras de saúde. Entre em contato para saber a situação atual do seu plano." },
+  { q: "Como faço para agendar?", a: "É só chamar no WhatsApp (11) 97609-5404 ou mandar uma mensagem no Instagram @equilibre_clinica. Respondemos com as opções de horário disponíveis." },
 ];

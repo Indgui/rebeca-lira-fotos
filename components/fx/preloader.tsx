@@ -32,14 +32,17 @@ export function Preloader() {
       {!done && (
         <motion.div
           key="pre"
-          className="fixed inset-0 z-[200] flex flex-col justify-between bg-forest p-6 text-cream md:p-10"
+          className="fixed inset-0 z-[200] flex flex-col justify-between brand-gradient p-6 text-cream md:p-10"
           exit={{ clipPath: "inset(0 0 100% 0)" }}
           initial={{ clipPath: "inset(0 0 0% 0)" }}
           transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
         >
-          <span className="text-sm uppercase tracking-[0.3em] opacity-70">Psicóloga · CRP 06/202525</span>
+          <span className="text-sm uppercase tracking-[0.3em] opacity-70">Mente &amp; Corpo</span>
           <div className="flex items-end justify-between gap-6">
-            <span className="serif text-5xl italic md:text-8xl">Rebeca Lira</span>
+            <span className="flex items-center gap-4 md:gap-6">
+              <img src="/simbolo-equilibre.svg" alt="" className="h-14 w-auto brightness-0 invert md:h-24" />
+              <span className="serif text-5xl italic md:text-8xl">Equilibre</span>
+            </span>
             <span className="text-6xl font-light tabular-nums md:text-9xl">{n}</span>
           </div>
         </motion.div>

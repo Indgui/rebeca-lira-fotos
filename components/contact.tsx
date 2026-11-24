@@ -14,7 +14,7 @@ export function Contact() {
 
   return (
     <footer ref={ref} id="contato" className="px-2 pb-2 md:px-4 md:pb-4">
-      <motion.div style={{ borderRadius: radius }} className="relative overflow-hidden bg-forest px-6 pb-8 pt-24 text-cream md:px-12 md:pt-32">
+      <motion.div style={{ borderRadius: radius }} className="relative overflow-hidden brand-gradient px-6 pb-8 pt-24 text-cream md:px-12 md:pt-32">
         <motion.div style={{ y }}>
           <div className="mx-auto max-w-[1400px]">
             <span className="text-xs font-medium uppercase tracking-[0.25em] text-cream/60">( Contato )</span>
@@ -38,7 +38,7 @@ export function Contact() {
               </Magnetic>
             </div>
             <p className="mt-8 max-w-md text-lg text-cream/70">
-              Dar o primeiro passo pode ser difícil, mas você não precisa fazer isso sozinho(a). Me mande uma mensagem e tiro suas dúvidas.
+              Dar o primeiro passo pode ser difícil, mas você não precisa fazer isso sozinho(a). Mande uma mensagem e tiramos suas dúvidas.
             </p>
 
             <div className="mt-20 grid gap-10 border-t border-cream/15 pt-10 text-sm md:grid-cols-3">
@@ -63,12 +63,13 @@ export function Contact() {
             </div>
           </div>
           <div className="mt-16 overflow-hidden">
-            <p className="serif whitespace-nowrap text-center text-[19vw] italic leading-[0.8] text-cream/10">Rebeca Lira</p>
+            <p className="serif whitespace-nowrap text-center text-[22vw] italic leading-[0.8] text-cream/15">Equilibre</p>
           </div>
           <div className="mx-auto mt-4 flex max-w-[1400px] flex-wrap justify-between gap-2 text-xs text-cream/50">
-            <span>© {new Date().getFullYear()} {site.fullName} · {site.role} · {site.crp}</span>
+            <span>© {new Date().getFullYear()} {site.legalName}</span>
+            <span>{site.rt}</span>
             <span>Fotos ilustrativas: Unsplash</span>
-            <a href="#inicio">Voltar ao topo ↑</a>
+            <a href="#inicio" className="md:mr-16">Voltar ao topo ↑</a>
           </div>
         </motion.div>
       </motion.div>

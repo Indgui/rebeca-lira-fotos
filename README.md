@@ -24,6 +24,3 @@ Alternativa sem GitHub: `npx vercel` dentro da pasta.
 - **Layout e animações de cada seção:** `components/*.tsx` e `components/fx/`
 - **Cores e fontes:** `app/globals.css` (bloco `@theme`)
 - **Fotos:** `public/` (rebeca-recorte, rebeca, rebeca-tapete, rebeca-consultorio)
-
-## Publicação
-Conectado à Vercel: cada push na branch `main` publica o site automaticamente em https://rebeca-lira.vercel.app

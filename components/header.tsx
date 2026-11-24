@@ -36,8 +36,12 @@ export function Header() {
             solid && !open ? "bg-cream/75 shadow-[0_8px_30px_rgba(0,0,0,.06)] backdrop-blur-xl" : ""
           }`}
         >
-          <a href="#inicio" className={`serif text-2xl italic transition-colors ${open ? "text-cream" : "text-ink"}`}>
-            Rebeca Lira
+          <a href="#inicio" aria-label="Clínica Equilibre — início" className="block">
+            <img
+              src="/logo-equilibre.svg"
+              alt="Clínica Equilibre Mente & Corpo"
+              className={`h-9 w-auto transition duration-500 md:h-11 ${open ? "brightness-0 invert" : ""}`}
+            />
           </a>
           <div className="flex items-center gap-2">
             <Magnetic>
@@ -71,7 +75,7 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[55] flex flex-col justify-between bg-forest px-6 pb-8 pt-28 text-cream md:px-12"
+            className="fixed inset-0 z-[55] flex flex-col justify-between brand-gradient px-6 pb-8 pt-28 text-cream md:px-12"
             initial={{ clipPath: "circle(0% at 95% 4%)" }}
             animate={{ clipPath: "circle(150% at 95% 4%)" }}
             exit={{ clipPath: "circle(0% at 95% 4%)" }}
@@ -104,7 +108,7 @@ export function Header() {
               transition={{ delay: 0.7 }}
               className="mx-auto flex w-full max-w-[1400px] flex-wrap items-center justify-between gap-4 text-sm"
             >
-              <span className="opacity-60">{site.role} · {site.crp}</span>
+              <span className="opacity-60">{site.fullName}</span>
               <div className="flex gap-3">
                 <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 font-medium text-ink">
                   <WhatsApp className="size-4" /> {site.whatsapp}
