@@ -68,7 +68,7 @@ export function Contact() {
           <div className="mx-auto mt-4 flex max-w-[1400px] flex-wrap justify-between gap-2 text-xs text-cream/50">
             <span>© {new Date().getFullYear()} {site.legalName}</span>
             <span>{site.rt}</span>
-            <span>Fotos ilustrativas: Unsplash</span>
+            <span>Fotos ilustrativas: Unsplash e Pexels</span>
             <a href="#inicio" className="md:mr-16">Voltar ao topo ↑</a>
           </div>
         </motion.div>

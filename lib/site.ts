@@ -2,18 +2,19 @@
 
 /** Fotos ilustrativas (Unsplash, licença livre para uso comercial). */
 const un = (id: string, w = 1400) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+const px = (id: string, w = 1400) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 export const photos = {
-  sobre: { src: un("1758273240373-370993d0275d"), alt: "Psicóloga escutando com atenção uma jovem durante a sessão" },
-  infantil: { src: un("1758273240331-745ccab011a2"), alt: "Terapeuta conversando com uma menina no sofá" },
-  psicopedagogia: { src: un("1758598737516-ffd38ba74838"), alt: "Mãe e filho desenhando juntos à mesa" },
-  adultos: { src: un("1758273240631-59d44c8f5b66"), alt: "Mulher conversando com a terapeuta no consultório" },
+  sobre: { src: px("5699473"), alt: "Psicóloga escutando com atenção durante uma sessão, à mesa do consultório" },
+  infantil: { src: un("1771765767087-ce71e4a7916a"), alt: "Profissional conversando com um menino em uma sala colorida" },
+  psicopedagogia: { src: px("36812773"), alt: "Adolescente estudando com o apoio de uma profissional" },
+  adultos: { src: px("4101132"), alt: "Homem conversando com a psicóloga em um consultório claro e acolhedor" },
   tea: { src: un("1758598737955-7c8a9556706a"), alt: "Mulher e criança montando blocos coloridos juntas" },
-  avaliacao: { src: un("1574492909706-09f2b2f0d909"), alt: "Menino concentrado montando um quebra-cabeça" },
-  avaliacaoPainel: { src: un("1771765767087-ce71e4a7916a"), alt: "Profissional mostrando números com os dedos para uma criança" },
+  avaliacao: { src: un("1771765767087-ce71e4a7916a"), alt: "Profissional conversando com um menino em uma sala colorida" },
+  avaliacaoPainel: { src: un("1758598737547-666bce663667"), alt: "Menino montando blocos com a profissional à mesa" },
   abaFamilia: { src: un("1758687126227-48c2fa04b653", 2000), alt: "Família brincando com blocos coloridos no chão de casa" },
-  abaCasa: { src: un("1758598737516-ffd38ba74838"), alt: "Mãe e filho desenhando juntos à mesa" },
-  online: { src: un("1758521541324-d304c5303fe5"), alt: "Jovem acenando em uma videochamada pelo notebook" },
-  presencial: { src: un("1714976694867-bc0e012fab70"), alt: "Duas mulheres conversando no sofá de um consultório" },
+  abaCasa: { src: un("1587323655395-b1c77a12c89a"), alt: "Adulto e criança desenhando juntos à mesa" },
+  online: { src: un("1758521541816-49d0090fccc4"), alt: "Jovem acenando em uma videochamada pelo notebook" },
+  presencial: { src: px("7176229"), alt: "Casal conversando com a psicóloga no sofá do consultório" },
 };
 const wa = (msg: string) => "https://wa.me/5511976095404?text=" + encodeURIComponent(msg);
 

@@ -24,7 +24,7 @@ export function Atendimento() {
           />
           <div className="mt-10 grid grid-cols-2 gap-4">
             <div className="relative">
-              <ImageReveal src={photos.online.src} alt={photos.online.alt} className="aspect-[3/4] w-full rounded-[2rem]" />
+              <ImageReveal src={photos.online.src} alt={photos.online.alt} className="aspect-[3/4] w-full rounded-[2rem]" imgClassName="object-[85%_50%]" />
               <span className="absolute bottom-4 left-4 rounded-full bg-cream/85 px-3 py-1.5 text-xs font-medium backdrop-blur-md md:text-sm">Online</span>
             </div>
             <div className="relative mt-12">
