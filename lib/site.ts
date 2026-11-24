@@ -37,6 +37,7 @@ export const site = {
 export const nav = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "A Clínica" },
+  { href: "#psicologas", label: "Psicólogas" },
   { href: "#especialidades", label: "Especialidades" },
   { href: "#avaliacao", label: "Avaliação Neuropsicológica" },
   { href: "#atendimento", label: "Atendimento" },
@@ -58,6 +59,34 @@ export const destaques = [
   { t: "Cuidado humanizado", d: "Escuta acolhedora, respeito e ausência de julgamentos em todo o processo." },
   { t: "Conhecimento científico", d: "Práticas fundamentadas na ciência psicológica e no Código de Ética Profissional." },
   { t: "Diferentes fases da vida", d: "Crianças, adolescentes, adultos, idosos e casais, incluindo pessoas com TEA e TDAH." },
+];
+
+export const psicologas = [
+  {
+    nome: "Rebeca Lira",
+    funcao: "Psicóloga",
+    crp: "CRP 06/202525",
+    foto: { src: "/rebeca-lira.webp", alt: "Rebeca Lira, psicóloga, sorrindo" },
+    destaques: ["Atendimento presencial e on-line", "Avaliação neuropsicológica", "Supervisão ABA"],
+    bio: [
+      "Psicóloga formada pela Universidade Cruzeiro do Sul, em 2023, Rebeca Lira possui experiência nas áreas administrativa e clínica, com atuação voltada ao cuidado e ao desenvolvimento humano.",
+      "Iniciou sua trajetória profissional como estagiária e, posteriormente, atuou como analista técnica na Clínica Salz, experiência que contribuiu para o aprimoramento de seus conhecimentos e práticas profissionais.",
+      "Atualmente, realiza atendimentos psicológicos presenciais e on-line, atua como supervisora ABA e desenvolve avaliações neuropsicológicas na Clínica-Escola da Universidade de Guarulhos (UNG).",
+      "Seu trabalho é pautado pela ética, pelo acolhimento e pela atenção às necessidades individuais, buscando oferecer um acompanhamento cuidadoso e respeitoso a cada pessoa.",
+    ],
+  },
+  {
+    nome: "Juçara Lira",
+    funcao: "Psicóloga",
+    crp: "CRP 06/12894",
+    foto: { src: "/jucara-lira.webp", alt: "Juçara Lira, psicóloga, de braços cruzados e sorrindo" },
+    destaques: ["Saúde Mental e Psiquiatria (IPq-HC)", "Atendimento Psicológico Domiciliar (PUC-SP)", "Atendimento clínico"],
+    bio: [
+      "Com uma trajetória dedicada ao cuidado com a saúde mental, Juçara Lira é psicóloga e possui especialização em Saúde Mental e Psiquiatria pelo Instituto de Psiquiatria do Hospital das Clínicas (IPq-HC), além de aperfeiçoamento em Atendimento Psicológico Domiciliar pela Pontifícia Universidade Católica de São Paulo (PUC-SP).",
+      "Realiza atendimentos clínicos particulares, oferecendo uma escuta acolhedora, ética e individualizada, respeitando a história, as necessidades e a singularidade de cada pessoa.",
+      "Seu trabalho é pautado pelo compromisso com o cuidado psicológico e pela compreensão integral do indivíduo, valorizando cada história e cada processo de desenvolvimento.",
+    ],
+  },
 ];
 
 export const areas = [

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { faqs, site } from "@/lib/site";
+import { faqs, psicologas, site } from "@/lib/site";
 import "@fontsource-variable/inter-tight";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -42,6 +42,7 @@ const jsonLd = {
   sameAs: [site.instagram],
   address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR", streetAddress: "São Miguel Paulista" },
   areaServed: "BR",
+  employee: psicologas.map((p) => ({ "@type": "Person", name: p.nome, jobTitle: `${p.funcao} (${p.crp})`, image: `${site.url}${p.foto.src}` })),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

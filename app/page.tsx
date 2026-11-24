@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Marquee } from "@/components/marquee";
 import { About } from "@/components/about";
+import { Psicologas } from "@/components/psicologas";
 import { Areas } from "@/components/areas";
 import { Avaliacao } from "@/components/avaliacao";
 import { Atendimento } from "@/components/atendimento";
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
+        <Psicologas />
         <Areas />
         <Avaliacao />
         <Atendimento />
