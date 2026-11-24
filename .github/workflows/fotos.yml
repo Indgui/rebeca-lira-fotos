@@ -1,0 +1,18 @@
+name: fotos
+on:
+  push:
+    branches: [fotos-busca]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y imagemagick >/dev/null
+      - run: |
+          if [ -f tools/baixar.py ]; then python3 tools/baixar.py; else python3 tools/busca.py; fi
+      - run: |
+          cd out && git init -q && git checkout -q -b fotos-resultado
+          git add -A && git -c user.name=bot -c user.email=bot@x commit -qm resultado
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" fotos-resultado
