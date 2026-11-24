@@ -23,7 +23,7 @@ export const site = {
   tagline: "Psicologia, avaliação neuropsicológica, psicopedagogia e acompanhamento em TEA e TDAH para todas as fases da vida.",
   // Responsável técnica (exigência do CFP para serviços de psicologia)
   rt: "Responsável técnica: Rebeca Lira Araujo · Psicóloga · CRP 06/202525",
-  url: "https://rebeca-lira.vercel.app", // troque pelo domínio final
+  url: "https://clinicaequilibre.vercel.app", // troque pelo domínio final
   instagram: "https://www.instagram.com/equilibre_clinica/",
   instagramHandle: "@equilibre_clinica",
   whatsapp: "(11) 91531-6550",
